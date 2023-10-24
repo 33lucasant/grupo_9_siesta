@@ -23,4 +23,4 @@ Los siguientes sitios fueros elegidos comor referentes gracias a su diseño mini
 - Florencia Gómez : https://github.com/florenciagomez7
 - María Victoria Ibarra: https://github.com/VickyIbarra
 - Lucas Santiago Gómez : https://github.com/33lucasant
-- Mauricio Esteban Plaza
+- Mauricio Esteban Plaza : https://github.com/MauricioEPlaza

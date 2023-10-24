@@ -20,7 +20,7 @@ Los siguientes sitios fueros elegidos comor referentes gracias a su diseño mini
 - https://www.adidas.com.ar/
 
 ### Integrantes:
-- Florencia Gómez
+- Florencia Gómez : https://github.com/florenciagomez7
 - María Victoria Ibarra
 - Lucas Santiago Gómez
 - Mauricio Esteban Plaza

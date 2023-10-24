@@ -22,5 +22,5 @@ Los siguientes sitios fueros elegidos comor referentes gracias a su diseño mini
 ### Integrantes:
 - Florencia Gómez : https://github.com/florenciagomez7
 - María Victoria Ibarra
-- Lucas Santiago Gómez
+- Lucas Santiago Gómez : https://github.com/33lucasant
 - Mauricio Esteban Plaza

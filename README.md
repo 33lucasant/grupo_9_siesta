@@ -24,3 +24,5 @@ Los siguientes sitios fueros elegidos comor referentes gracias a su diseño mini
 - María Victoria Ibarra: https://github.com/VickyIbarra
 - Lucas Santiago Gómez : https://github.com/33lucasant
 - Mauricio Esteban Plaza : https://github.com/MauricioEPlaza
+
+### Trello: https://trello.com/b/u27ENUZ0/grupo9siesta

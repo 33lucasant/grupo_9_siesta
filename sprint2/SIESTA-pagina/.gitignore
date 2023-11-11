@@ -1,0 +1,14 @@
+ <nav>
+            <ul>
+                <li> <a href="#">AYUDA </a> </li>
+            </ul>
+            <ul>
+                <li> <a href="#">SEGUINOS </a> </li>
+            </ul>
+            <ul>
+                <li> <a href="#">EMPRESA </a> </li>
+            </ul>
+            <ul>
+                <li> <a href="#">POLITICAS </a> </li>
+            </ul>
+        </nav>

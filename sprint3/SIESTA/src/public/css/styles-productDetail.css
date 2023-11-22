@@ -440,3 +440,29 @@ body {
 i {
     transition: 450ms;
 }
+
+.form-createnedit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-createnedit input, .form-createnedit button {
+    width: 200px;
+}
+
+.form-createnedit label, .form-createnedit button {
+    margin-top: 20px;
+}
+
+.form-createnedit h3 {
+    margin: 20px 0;
+}
+
+.radio-button {
+    display: flex;
+}
+
+.radio-button input {
+    width: 20px;
+}

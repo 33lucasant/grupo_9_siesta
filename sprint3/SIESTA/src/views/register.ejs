@@ -1,37 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-
-    <script src="https://kit.fontawesome.com/e32b1dc814.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/styles-login&register.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100&display=swap"
-        rel="stylesheet">
-    <link rel="icon" type="image/png" href="static/img/favicon SIESTA1.png">
-</head>
+<%- include('partials/head', {Title: 'Register'}) %>
 
 <body>
-    <header class="top-header">
-        <div class="burger-menu">
-            <a href="/"><i class="fas fa-bars"></i></a>
-        </div>
-        <div class="logo">
-            <img src="/img/Logo_siesta.png" alt="LogoSiesta">
-        </div>
-        <div class="form" action="#" method="GET">
-            <div class="input">Buscar productos</div>
-            <div class="submit"><i class="fa fa-search"></i></div>
-        </div>
-        <div class="enlaces">
-            <div class="ayuda"><i class="fas fa-question-circle"></i></div>
-            <div class="carrito"><i class="fas fa-shopping-cart"></i></div>
-        </div>
-    </header>
+    <%- include('partials/header.ejs') %>
 
     <main>
         <form class="datos">
@@ -55,7 +28,7 @@
             </div>
             <div class="checkbox">
                 <input type="checkbox" name="categorias" value="politica">
-                <label for="politica">He podido leer y acepto los terminos.</label>
+                <label for="politica">He podido leer y acepto los términos.</label>
             </div>
             <br><br>
             <button>CREAR CUENTA</button>
@@ -85,6 +58,9 @@
                     <li>CONDICIONES DE COMPRA</li>
                 </ul>
             </div>
+        </div>
+
+        <%- include('partials/footer') %>
     </footer>
 </body>
 

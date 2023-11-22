@@ -146,7 +146,7 @@ ul,ol{
     }
 
     .footer-container{
-        display: flex;
+        display: none;
     }
     
 }
@@ -171,4 +171,13 @@ ul,ol{
         margin: 10%;
     }
 
+}
+
+.a-login {
+    text-decoration: none;
+    color: #000000;
+}
+
+.a-login:hover {
+    color:darkgrey;
 }

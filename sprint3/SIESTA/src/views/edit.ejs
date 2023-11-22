@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head', {Title: 'Edit'}) %>
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <form action="/edit" method="post" class="form-createnedit" style="height: 70vh;"> 
+        <label for="edit">Nombre del producto</label>
+        <br>
+        <input type="text" id="edit" name="edit">
+
+        <br>
+        <label for="edit">Descripción</label>
+        <br>
+        <input type="text" id="edit" name="edit">
+
+        <br>
+        <label for="edit">Imagen</label>
+        <br>
+        <input type="file" id="edit" name="edit">
+
+        <h3>Categoría</h3>
+        <br>
+        <div class="radio-button">
+            <div style="margin: 0 10px">
+                <input type="radio" name="edit" value="Hombre">Hombre
+            </div>
+            <div style="margin: 0 10px">
+                <input type="radio" name="edit" value="Mujer">Mujer
+            </div>
+        </div>
+       
+        <br>
+        <label for="edit">Colores</label>
+        <br>
+        <input type="color" id="edit" name="edit">
+
+        <br>
+        <label for="edit">Talles</label>
+        <br>
+        <input type="text" id="edit" name="edit">
+
+        <br>
+        <label for="edit">Precio</label>
+        <br>
+        <input type="text" id="edit" name="edit">
+
+        <br>
+        <button type="submit">Editar Producto</button>
+    </form>
+
+    <%- include('partials/footer') %>
+</body>
+</html>

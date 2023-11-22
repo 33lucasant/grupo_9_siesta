@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('partials/head') %>
+<%- include('partials/head', {Title: 'Login'}) %>
 
 <body>
     <%- include('partials/header.ejs') %>
@@ -19,12 +19,12 @@
             <button class="h4-login">INICIAR SESION</button>
             <br>
             <br>
-            <div class="recuperar"><a href="#">¿Has olvidado tu contraseña?</a></div>
+            <div class="recuperar"><a href="#" class="a-login">¿Has olvidado tu contraseña?</a></div>
         </form>
         <form class="registro">
             <h4>¿NECESITAS UNA CUENTA?</h4>
             <br>
-            <button href='/register'>REGISTRATE</button>
+            <button> <a href="/register" class="a-login">REGISTRATE</a></button>
         </form>
     </main>
 
@@ -51,6 +51,9 @@
                     <li>CONDICIONES DE COMPRA</li>
                 </ul>
             </div>
+        </div>
+        
+        <%- include('partials/footer') %>
     </footer>
 </body>
 

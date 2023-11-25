@@ -121,7 +121,7 @@ body {
 
 @media (min-width: 768px) {
     body {
-        padding-top: 11vw;
+        padding-top: 4vw;
         padding-bottom: 0;
     }
 
@@ -192,6 +192,7 @@ body {
         justify-content: space-around;
         flex-wrap: wrap;
         position: relative;
+        margin: 10vw 0;
     }
 
     .scroll-producto, .scroll-img, .description-div, .productos-recomendados {
@@ -225,13 +226,20 @@ body {
     }
 
     .description-div {
+        text-align: center;
         width: 210px;
         font-size: 70%;
+        align-self: center;
     }
+
 
     .nombre-y-desc-div {
         padding: 10px 10px;
         border: solid 0.5px black;
+    }
+
+    .nombre-y-desc-div p {
+        text-align: start;
     }
 
     .talla-div {
@@ -245,11 +253,10 @@ body {
     }
 
     .tallas {
-        width: 177px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         flex-wrap: wrap;
-        padding: 0 8px;
+        padding: 0 15px;
     }
 
     .button-tallas {
@@ -257,7 +264,7 @@ body {
         padding: 10px 20px;
         border: solid 0.5px #000000;
         background-color: #ffffff;
-        margin: 5px 5px;
+        margin: 5px 0;
     }
 
     .add-to-cart-div {
@@ -300,7 +307,7 @@ body {
         display: none;
     }
 
-    .productos-recomendados {
+    .products {
         display: flex;
         flex-wrap: wrap;
         text-align: center;
@@ -328,19 +335,15 @@ body {
         width: 100%;
     }
 
-    .div-cart {
+    .div-product-description {
         padding: 10px 10px;
     }
 
-    .div-cart a {
-        color: #000000;
-        text-decoration: none;
-    }
 }
 
 @media (min-width: 1200px) {
     body {
-        padding-top: 8vw;
+        padding-top: 5vw;
     }
 
     .main-header-top-bar {
@@ -368,6 +371,10 @@ body {
         width: 100%;
     }
 
+    .main {
+        margin: 5vw 0;
+    }
+
     .composition-n-origin {
         display: block;
         flex-wrap: wrap;
@@ -384,8 +391,12 @@ body {
     }  
 
     .main-product {
-        width: 30vw;
+        width: 40vw;
         display: flex;
+    }
+
+    .description-div {
+        font-size: 80%;
     }
 
     .small-product {
@@ -429,11 +440,11 @@ body {
 }
 
 
-.div-cart a, .add-to-cart-div a {
+.div-product-description a, .add-to-cart-div a {
     transition: 450ms;
 }
 
-.div-cart:hover a, .add-to-cart-div:hover a {
+.div-product-description:hover a, .add-to-cart-div:hover a {
     color: #ebebeb;
 }
 
@@ -465,4 +476,22 @@ i {
 
 .radio-button input {
     width: 20px;
+}
+
+.product-a {
+    text-decoration: none;
+    width: 30%;
+    margin: 5px 15px 50px 15px;
+}
+
+.product-article {
+    border: 0.5px solid black;
+}
+
+.product-article img {
+    width: 100%;
+}
+
+.div-product-description {
+    color: black;
 }

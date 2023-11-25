@@ -1,10 +1,8 @@
 <div class="main-product">
-    <img src="/img/ejemplo1.jpg" class="img-principal">
+    <img src="/img/<%= productDetail.imgs[0] %>" class="img-principal">
     <div class="small-product">
-        <img src="/img/ejemplo2.jpg" class="img-secundaria">
-        <img src="/img/ejemplo3.jpg" class="img-secundaria">
-        <img src="/img/ejemplo4.jpg" class="img-secundaria">
-        <img src="/img/ejemplo5.jpg" class="img-secundaria">
-        <img src="/img/ejemplo6.jpg" class="img-secundaria">
+        <% for (let i = 1; i < productDetail.imgs.length; i++) { %>
+            <img src="/img/<%= productDetail.imgs[i] %>" class="img-secundaria">
+        <% } %>
     </div>
 </div>

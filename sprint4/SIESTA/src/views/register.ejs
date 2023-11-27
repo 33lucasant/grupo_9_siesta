@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head', {Title: 'Register'}) %>
+
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <main>
+        <form class="datos">
+            <h4>DATOS PERSONALES</h4>
+            <br>
+            <div class="inp"><input type="text" placeholder="E-MAIL" required></div>
+            <br>
+            <br>
+            <div class="inp"><input type="text" placeholder="CONTRASEÑA" required></div>
+            <br>
+            <br>
+            <div class="inp"><input type="text" placeholder="NOMBRE" required></div>
+            <br>
+            <br>
+            <div class="inp"><input type="text" placeholder="APELLIDO" required></div>
+            <br>
+            <br>
+            <div class="checkbox">
+                <input type="checkbox" name="categorias" value="notificaciones">
+                <label for="notificaciones">Quiere recibir notificaciones</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="categorias" value="politica">
+                <label for="politica">He podido leer y acepto los términos.</label>
+            </div>
+            <br><br>
+            <button>CREAR CUENTA</button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <ul class="pie1">
+                    <H4>AYUDA</H4>
+                    <li>MI CUENTA</li>
+                    <li>ARTICULOS Y TALLES</li>
+                </ul>
+            </div>
+            <div>
+                <ul class="pie2">
+                    <H4>SIGUENOS</H4>
+                    <li>INSTAGRAM</li>
+                    <li>FACEBOOK</li>
+                </ul>
+            </div>
+            <div>
+                <ul class="pie3">
+                    <h4>POLITICAS</h4>
+                    <li>POLITICA DE PRIVACIDAD</li>
+                    <li>CONDICIONES DE COMPRA</li>
+                </ul>
+            </div>
+        </div>
+
+        <%- include('partials/footer') %>
+    </footer>
+</body>
+
+</html>

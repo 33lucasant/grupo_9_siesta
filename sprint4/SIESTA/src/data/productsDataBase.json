@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Blazer straight fit",
+        "price": 50000,
+        "description": "Blazer straight fit confeccionada en tejido de algodón. Cuello con solapas de muesca y manga larga. Bolsillo de vivo en pecho y de solapa en cadera. Cierre frontal de botonadura.",
+        "image": "ejemplo1.jpg",
+        "colors": "Marrón / Topo | 4387/300",
+        "size1": "S",
+        "size2": "M",
+        "size3": "L",
+        "size4": "XL"
+    },
+    {
+        "id": 2,
+        "name": "Blazer straight fit",
+        "price": 20000,
+        "description": "Blazer straight fit confeccionada en tejido de algodón. Cuello con solapas de muesca y manga larga. Bolsillo de vivo en pecho y de solapa en cadera. Cierre frontal de botonadura.",
+        "image": "producto1.jpg",
+        "colors": "Marrón / Topo | 4387/300",
+        "size1": "S",
+        "size2": "M",
+        "size3": "L",
+        "size4": "XL"
+    }
+]

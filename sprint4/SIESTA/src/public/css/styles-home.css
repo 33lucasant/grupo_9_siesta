@@ -1,0 +1,173 @@
+/* Reset de estilos y estilos generales */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilos del encabezado */
+.header {
+  background-image: url(/img/bannerheaderSiesta.png);
+  background-size: 85%;
+}
+
+overflow-x{
+  color: #fff;
+  padding: 20px
+}
+
+/*.banner img{
+  width: 400%;
+}*/
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo img {
+  width: 150px; /* para Ajustar el tamaño del logo según sea necesario */
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+/* Estilos del menú de navegación */
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 18px;
+}
+
+/* Estilos de la sección de productos */
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.producto {
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #000;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.producto img {
+  max-width: 100%;
+  height: auto; /* Mantiene la proporción de aspecto de la imagen */
+}
+.info-producto {
+  text-align: center;
+}
+
+.envio {
+  color: #000;
+}
+
+.precio {
+  font-weight: bold;
+}
+
+.descuento {
+  color: #ff0000; /* Rojo para destacar el descuento */
+}
+
+.descripcion {
+  font-style: italic;
+}
+
+/* Estilos del pie de página */
+.footer-social {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+.social {
+  margin-bottom: 10px;
+}
+
+.social a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Estilos de íconos Font Awesome */
+.fa-truck {
+  color: #000;
+}
+/* Estilos del encabezado */
+.header {
+  background-color: white;
+  color: #fff;
+  padding: 20px 0;
+  position: relative; /* Añade posición relativa para posicionar el banner */
+}
+
+/* Nueva clase para el banner */
+.banner {
+  position: absolute;
+  top: 50%; /* Centra verticalmente en relación con el encabezado */
+  left: 50%; /* Centra horizontalmente en relación con el encabezado */
+  transform: translate(-50%, -50%); /* Centra exactamente */
+  max-width: 100%; /* Ajusta el ancho según sea necesario */
+  height: auto; /* Mantiene la proporción de aspecto */
+}
+
+.banner img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos de la sección de productos */
+.section-2 {
+  position: relative;
+}
+/* Añade la propiedad max-width para las imágenes dentro de la sección 2 */
+.section-2 img {
+  max-width: 100%;
+  height: auto;
+}
+/* Ajusta el valor según sea necesario para separar las redes sociales del contenido superior */
+.social {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+/* Estilos del pie de página */
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+}

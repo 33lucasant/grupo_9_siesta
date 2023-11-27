@@ -1,0 +1,183 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*BODY*/
+body{
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+/*HEADER*/
+.top-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1%;
+}
+
+body header div a img{
+    width: 30%;
+}
+
+.enlaces{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1%;
+}
+
+.burger-menu{
+    display: block;
+}
+
+.logo{
+    display: none;
+}
+
+header .form {
+    display: none;
+    align-items: center;
+    padding: 2px;
+    font-size: 11px;
+    width: 50%;
+    border: 1px solid black;
+    background-color: #FFF;
+    justify-content: space-between;
+}
+
+/*MAIN*/
+body main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body main .acceso,
+body main .datos{
+    margin: auto;
+    margin-top: 10%;
+    text-align: center;
+}
+
+body main .registro{
+    margin:auto;
+    margin-top: 20%;
+    text-align: center;
+}
+
+main form .inp input{
+    border-color: white;
+    border: 1px solid white;
+    width: 85%;
+    border-bottom: 1px solid black;
+}
+
+main form .recuperar{
+    font-size: 70%;
+}
+
+main form button{
+    border: 1px solid black;
+    background-color: white;
+    padding: 1%;
+    width: 85%;
+}
+
+main form button:hover{
+    color:darkgrey;
+}
+
+.checkbox{
+    display: flex;
+    width: 100%;
+}
+
+/*FOOTER*/
+.footer-container{
+    display: none;
+    justify-content: space-around;
+    padding: 2%;
+    margin-top: 5%;
+    font-size: 12px;
+}
+
+.footer-container h4{
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+ul,ol{
+    list-style: disc;
+}
+
+/*MEDIA*/
+@media (min-width: 368px) {
+    
+    main form.registro{
+        margin-top: 10%;
+    }
+
+    main form .recuperar{
+        font-size: 80%;
+    }
+
+    header .form{
+        display: flex;
+    }
+
+    header div.form{
+        display: flex;
+        border: 1px solid black;
+        width: 40%;
+        height: 10%;
+        justify-content: space-between;
+    }
+
+    .enlaces{
+        width: 20%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .logo{
+        display: block;
+    }
+
+    .footer-container{
+        display: none;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    body main .acceso{
+        text-align: start;
+        width: 40%;
+    }
+    body main .registro{
+        text-align: start;
+        width: 40%;
+    }
+
+    main form .recuperar{
+        font-size: 100%;
+    }
+
+    body main .datos{
+        text-align: start;
+        width: 40%;
+        margin: 10%;
+    }
+
+}
+
+.a-login {
+    text-decoration: none;
+    color: #000000;
+}
+
+.a-login:hover {
+    color:darkgrey;
+}

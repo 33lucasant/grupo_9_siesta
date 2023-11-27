@@ -3,52 +3,41 @@
     <%- include('partials/head', {Title: 'Create'}) %>
 <body>
     <%- include('partials/header.ejs') %>
+
+    <div class="form-create">
+
+        <h1>Crear producto</h1>
+
+        <form action="/products/create" method="post">
+            <input type="text" name="name" placeholder="Nombre del producto">
+            <br>
+
+            <input type="text" name="price" placeholder="Precio del producto">
+            <br>
+
+            <textarea name="description"  cols="30" rows="10" placeholder="Descripción del producto"></textarea>
+            <br>
+
+            <h3>Imagen del producto</h3>
+            <input type="file" name="image" placeholder="Imagen del producto">
+            <br>
     
-    <form action="/create" method="post" class="form-createnedit" style="height: 70vh;"> 
-        <label for="create">Nombre del producto</label>
-        <br>
-        <input type="text" id="create" name="create">
+            <input type="text" name="colors" placeholder="Color del producto">
+            <br>
+            
+            <input type="text" name="size1" placeholder="Talle del producto">
+            <br>
+            <input type="text" name="size2" placeholder="Talle del producto">
+            <br>
+            <input type="text" name="size3" placeholder="Talle del producto">
+            <br>
+            <input type="text" name="size4" placeholder="Talle del producto">
+            <br>
+    
+            <button type="submit" class="btn btn-success btn-block">Editar producto</button>
+        </form>
 
-        <br>
-        <label for="create">Descripción</label>
-        <br>
-        <input type="text" id="create" name="create">
-
-        <br>
-        <label for="create">Imagen</label>
-        <br>
-        <input type="file" id="create" name="create">
-
-        <br>
-        <h3>Categoría</h3>
-        <br>
-        <div class="radio-button">
-            <div style="margin: 0 10px">
-                <input type="radio" name="create" value="Hombre">Hombre
-            </div>
-            <div style="margin: 0 10px">
-                <input type="radio" name="create" value="Mujer">Mujer
-            </div>
-        </div>
-       
-        <br>
-        <label for="create">Colores</label>
-        <br>
-        <input type="color" id="create" name="create">
-
-        <br>
-        <label for="create">Talles</label>
-        <br>
-        <input type="text" id="create" name="create">
-
-        <br>
-        <label for="create">Precio</label>
-        <br>
-        <input type="text" id="create" name="create">
-
-        <br>
-        <button type="submit">Crear Producto</button>
-    </form>
+    </div>
 
     <%- include('partials/footer') %>
 </body>

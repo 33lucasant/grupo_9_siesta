@@ -4,50 +4,39 @@
 <body>
     <%- include('partials/header.ejs') %>
 
-    <form action="/edit" method="post" class="form-createnedit" style="height: 70vh;"> 
-        <label for="edit">Nombre del producto</label>
-        <br>
-        <input type="text" id="edit" name="edit">
+    <div class="form-edit">
 
-        <br>
-        <label for="edit">Descripción</label>
-        <br>
-        <input type="text" id="edit" name="edit">
+        <h1>Editar Producto</h1>
 
-        <br>
-        <label for="edit">Imagen</label>
-        <br>
-        <input type="file" id="edit" name="edit">
+        <form action="/products/edit?_method=PUT" method="POST">
+            <input type="text" name="name" placeholder="Nombre del producto">
+            <br>
 
-        <h3>Categoría</h3>
-        <br>
-        <div class="radio-button">
-            <div style="margin: 0 10px">
-                <input type="radio" name="edit" value="Hombre">Hombre
-            </div>
-            <div style="margin: 0 10px">
-                <input type="radio" name="edit" value="Mujer">Mujer
-            </div>
-        </div>
-       
-        <br>
-        <label for="edit">Colores</label>
-        <br>
-        <input type="color" id="edit" name="edit">
+            <input type="text" name="price" placeholder="Precio del producto">
+            <br>
 
-        <br>
-        <label for="edit">Talles</label>
-        <br>
-        <input type="text" id="edit" name="edit">
+            <textarea name="description"  cols="30" rows="10" placeholder="Descripción del producto"></textarea>
+            <br>
 
-        <br>
-        <label for="edit">Precio</label>
-        <br>
-        <input type="text" id="edit" name="edit">
+            <h3>Imagen del producto</h3>
+            <input type="file" name="image" placeholder="Imagen del producto">
+            <br>
 
-        <br>
-        <button type="submit">Editar Producto</button>
-    </form>
+            <input type="text" name="colors" placeholder="Color del producto">
+            <br>
+
+            <input type="text" name="size1" placeholder="Talle del producto">
+            <br>
+            <input type="text" name="size2" placeholder="Talle del producto">
+            <br>
+            <input type="text" name="size3" placeholder="Talle del producto">
+            <br>
+            <input type="text" name="size4" placeholder="Talle del producto">
+            <br>
+
+            <button type="submit" class="btn btn-success btn-block">Editar producto</button>
+        </form>
+    </div>
 
     <%- include('partials/footer') %>
 </body>

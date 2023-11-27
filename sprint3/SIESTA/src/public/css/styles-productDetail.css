@@ -6,8 +6,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    padding-top: 48px;
-    padding-bottom: 116px;
+    padding-top: 60px;
+    padding-bottom: 113px;
     background-color: #ffffff;
 }
 
@@ -391,8 +391,9 @@ body {
     }  
 
     .main-product {
-        width: 40vw;
+        width: 35vw;
         display: flex;
+        margin-right: 30px;
     }
 
     .description-div {
@@ -452,32 +453,6 @@ i {
     transition: 450ms;
 }
 
-.form-createnedit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.form-createnedit input, .form-createnedit button {
-    width: 200px;
-}
-
-.form-createnedit label, .form-createnedit button {
-    margin-top: 20px;
-}
-
-.form-createnedit h3 {
-    margin: 20px 0;
-}
-
-.radio-button {
-    display: flex;
-}
-
-.radio-button input {
-    width: 20px;
-}
-
 .product-a {
     text-decoration: none;
     width: 30%;
@@ -494,4 +469,45 @@ i {
 
 .div-product-description {
     color: black;
+}
+
+.form-create {
+    margin-top: 4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.form-create h1 {
+    margin-bottom: 20px;
+}
+
+.form-create input {
+    margin: 8px 0;
+    text-align: center;
+    width: 20vw;
+}
+
+.radio-button input {
+    width: 15px;
+    margin-right: 6px;
+}
+
+.form-edit {
+    margin-top: 4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.form-edit h1 {
+    margin-bottom: 20px;
+}
+
+.form-edit input {
+    margin: 8px 0;
+    text-align: center;
+    width: 20vw;
 }

@@ -339,6 +339,40 @@ body {
         padding: 10px 10px;
     }
 
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    .edit-button {
+        background-color: #000000;
+        text-decoration: none;
+        color: #ffffff;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 8px;
+        transition: all;
+    }
+
+    .edit-button:hover {
+        color: darkgray;
+    }
+
+
+    .delete-form {
+        width: 100%;
+    }
+
+    .delete-button {
+        background-color: #000000;
+        text-decoration: none;
+        color: #ffffff;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        font-size: 11px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -429,6 +463,41 @@ body {
     .recomendado a {
         padding: 30px 0;
     }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    .edit-button {
+        background-color: #000000;
+        text-decoration: none;
+        color: #ffffff;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 8px;
+        transition: all;
+    }
+
+    .edit-button:hover {
+        color: darkgray;
+    }
+
+
+    .delete-form {
+        width: 100%;
+    }
+
+    .delete-button {
+        background-color: #000000;
+        text-decoration: none;
+        color: #ffffff;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        font-size: 14px;
+    }
 }
 
 
@@ -471,22 +540,54 @@ i {
     color: black;
 }
 
-.form-create {
-    margin-top: 4vw;
+.form-create, .form-edit {
+    margin: 2vw 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-.form-create h1 {
-    margin-bottom: 20px;
+.form-create h1, .form-edit h1 {
+    margin-bottom: 40px;
 }
 
-.form-create input {
-    margin: 8px 0;
+.form-create input, .form-edit input {
+    margin: 20px 0;
     text-align: center;
-    width: 20vw;
+    width: 30vw;
+    border: none;
+    border-bottom: 1px solid #000000;
+    color: black;
+    font-size: 16px;
+}
+
+.form-create textarea, .form-edit textarea {
+    width: 30vw;
+    text-align: center;
+    border: 1px solid #000000;
+    height: 4vw;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.form-create label, .form-edit label {
+    font-size: 20px;
+    margin-top: 60px;
+}
+
+.form-create button, .form-edit button {
+    width: 30vw;
+    background-color: #000000;
+    color: #ffffff;
+    height: 2vw;
+    margin-top: 20px;
+    border: none;
+    font-size: 16px;
+}
+
+#img {
+    border: none;
 }
 
 .radio-button input {
@@ -494,20 +595,31 @@ i {
     margin-right: 6px;
 }
 
-.form-edit {
-    margin-top: 4vw;
+.product-create {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    justify-content: center;
+    margin-top: 4vw;
 }
 
-.form-edit h1 {
-    margin-bottom: 20px;
+#create-button {
+    box-shadow: 0px 8px 0px 0px darkgray;
+	background-color:#000000;
+	border-radius:42px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 10px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #000000;
 }
 
-.form-edit input {
-    margin: 8px 0;
-    text-align: center;
-    width: 20vw;
+#create-button:hover {
+    background-color:darkgray;
+}
+
+#create-button:active {
+    position:relative;
+	top:1px;
 }

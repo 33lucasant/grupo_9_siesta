@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "first_name": "a",
+        "last_name": "a",
+        "email": "a@email.com",
+        "password": "a",
+        "avatar": "a_img"
+    },
+    {
+        "id": "2",
+        "first_name": "b",
+        "last_name": "b",
+        "email": "b@email.com",
+        "password": "b",
+        "avatar": "b_img"
+    },
+    {
+        "id": "3",
+        "first_name": "c",
+        "last_name": "c",
+        "email": "c@email.com",
+        "password": "c",
+        "avatar": "c_img"
+    }
+]

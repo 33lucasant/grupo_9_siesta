@@ -1,5 +1,7 @@
 <div class="scroll-producto">   
     <div class="scroll-img">
-        <img src="/img/<%= productDetail.image %>" class="img-prod">
+        <% for (let i = 0; i < productDetail.images.length; i++) { %>
+            <img src="/img/products/<%= productDetail.images[i] %>" class="img-prod">
+        <% } %>
     </div>
 </div>

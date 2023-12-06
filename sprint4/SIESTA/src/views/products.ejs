@@ -3,13 +3,20 @@
 <%- include('partials/head', {Title: 'Products'}) %>
 <body>
     <%- include('partials/header') %>
+
+    <section class="product-create">
+        <a href="/products/create">
+            <button id="create-button">CREAR PRODUCTO</button>
+        </a>
+    </section>
+
     <main class="products-main">
         <div class="products-div">
             <div class="products">
                 <% products.forEach(product => { %>
-                    <a href="/products/product/<%= product.id %>" class="product-a">
+                    <a href="/products/detail/<%= product.id %>" class="product-a">
                         <article class="product-article">
-                            <img src="/img/<%= product.image %>">
+                            <img src="/img/products/<%= product.images[0] %>">
                             <div class="div-product-description">
                                 <p><%= product.name %></p>
                                 <p>$<%= product.price %></p>

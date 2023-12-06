@@ -1,3 +1,8 @@
 <div class="main-product">
-    <img src="/img/<%= productDetail.image %>" class="img-principal">
+    <img src="/img/products/<%= productDetail.images[0] %>" class="img-principal">
+    <div class="small-product">
+        <% for (let i = 1; i < productDetail.images.length; i++) { %>
+            <img src="/img/products/<%= productDetail.images[i] %>" class="img-secundaria">
+        <% } %>
+    </div>
 </div>

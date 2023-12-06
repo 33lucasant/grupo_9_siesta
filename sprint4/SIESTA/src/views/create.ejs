@@ -6,35 +6,37 @@
 
     <div class="form-create">
 
-        <h1>Crear producto</h1>
+        <form action="/products" method="POST" enctype="multipart/form-data">
 
-        <form action="/products/create" method="post">
-            <input type="text" name="name" placeholder="Nombre del producto">
-            <br>
+            <h1>CREAR PRODUCTO</h1>
 
-            <input type="text" name="price" placeholder="Precio del producto">
+            <input type="text" name="name" placeholder="Nombre">
             <br>
 
-            <textarea name="description"  cols="30" rows="10" placeholder="Descripción del producto"></textarea>
+            <input type="text" name="price" placeholder="Precio">
             <br>
 
-            <h3>Imagen del producto</h3>
-            <input type="file" name="image" placeholder="Imagen del producto">
+            <textarea name="description"  cols="33" rows="10" placeholder="Descripción"></textarea>
             <br>
-    
-            <input type="text" name="colors" placeholder="Color del producto">
+
+            <label>Imagenes</label>
             <br>
-            
-            <input type="text" name="size1" placeholder="Talle del producto">
+            <input type="file" id="img" name="images" multiple>
             <br>
-            <input type="text" name="size2" placeholder="Talle del producto">
+        
+            <input type="text" name="colors" placeholder="Color">
             <br>
-            <input type="text" name="size3" placeholder="Talle del producto">
+                
+            <input type="text" name="size1" placeholder="Talle">
             <br>
-            <input type="text" name="size4" placeholder="Talle del producto">
+            <input type="text" name="size2" placeholder="Talle">
             <br>
-    
-            <button type="submit" class="btn btn-success btn-block">Editar producto</button>
+            <input type="text" name="size3" placeholder="Talle">
+            <br>
+            <input type="text" name="size4" placeholder="Talle">
+            <br>
+
+            <button type="submit" class="btn btn-success btn-block">CREAR</button>
         </form>
 
     </div>

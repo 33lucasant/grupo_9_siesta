@@ -45,7 +45,14 @@
                     </a>
                 </div>
 
+                <div class="buttons">
+                    <a href="/products/edit/<%= productDetail.id %>" class="edit-button">EDITAR</a>
+                    <form action="/products/<%= productDetail.id %>/?_method=DELETE" method="POST" style="display: inline-flex" class="delete-form">
+                        <button type="submit" class="delete-button">ELIMINAR</button>
+                    </form>
+                </div>
             </div>
+
         </div>
     </main>
 

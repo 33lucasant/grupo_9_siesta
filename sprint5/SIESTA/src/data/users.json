@@ -1,0 +1,10 @@
+[
+ {
+  "id": 1,
+  "email": "admin@siesta.com",
+  "password": "$2a$10$9e0hIMwVkHdcPGFRd4aVJeax2mCYCwhr2FGN6wKmjVZrDT.d3cMFW",
+  "firstName": "Admin",
+  "lastName": "Siesta",
+  "avatar": "IMG-1704861279813.png"
+ }
+]

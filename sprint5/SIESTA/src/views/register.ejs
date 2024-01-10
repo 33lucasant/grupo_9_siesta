@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head', {Title: 'Register'}) %>
+
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <main class="register-main">
+        <form class="datos" action="/user/register" method="POST" enctype="multipart/form-data">
+            <h4>DATOS PERSONALES</h4>
+            <br>
+            <div class="inp">
+                <input 
+                    type="text"
+                    placeholder="E-MAIL" 
+                    name="email"
+                    class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                    value="<%= locals.oldData ? oldData.email : null %>"
+                >
+            </div>
+            <br>
+            <% if (locals.errors && errors.email) { %>
+                <p class="register-error">
+                    <%= errors.email.msg %>
+                </p>
+            <% } %>
+            <br>
+            <div class="inp">
+                <input 
+                    type="password" 
+                    placeholder="CONTRASEÑA" 
+                    name="password" 
+                    class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                >
+            </div>
+            <br>
+            <% if (locals.errors && errors.password) { %>
+                <p class="register-error">
+                    <%= errors.password.msg %>
+                </p>
+            <% } %>
+            <br>
+            <div class="inp">
+                <input 
+                    type="text" 
+                    placeholder="NOMBRE" 
+                    name="firstName"
+                    class="form-control <%= locals.errors && errors.firstName ? 'is-invalid' : null %>"
+                    value="<%= locals.oldData ? oldData.firstName : null %>"
+                >
+            </div>
+            <br>
+            <% if (locals.errors && errors.firstName) { %>
+                <p class="register-error">
+                    <%= errors.firstName.msg %>
+                </p>
+            <% } %>
+            <br>
+            <div class="inp">
+                <input 
+                    type="text" 
+                    placeholder="APELLIDO" 
+                    name="lastName"
+                    class="form-control <%= locals.errors && errors.lastName ? 'is-invalid' : null %>"
+                    value="<%= locals.oldData ? oldData.lastName : null %>"
+                >
+            </div>
+            <br>
+            <% if (locals.errors && errors.lastName) { %>
+                <p class="register-error">
+                    <%= errors.lastName.msg %>
+                </p>
+            <% } %>
+            <br>
+            <label for="avatar" id="avatar-label">IMAGEN DE PERFIL</label>
+            <br>
+            <br>
+            <div class="inp"><input type="file" name="avatar" id="avatar"></div>
+            <br>
+            <% if (locals.errors && errors.avatar) { %>
+                <p class="register-error">
+                    <%= errors.avatar.msg %>
+                </p>
+            <% } %>
+            <br>
+            <button type="submit">CREAR CUENTA</button>
+        </form>
+    </main>
+
+
+    <%- include('partials/footer') %>
+    
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head', {Title: 'Login'}) %>
+
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <main class="login-main">
+        <form action="/user/login" method="POST" class="acceso">
+            <h4 class="h4-login">ACCEDE A TU CUENTA</h4>
+            <br>
+            <div class="inp"><input type="text" name="email" placeholder="E-MAIL" required></div>
+            <br>
+            <% if (locals.errors && errors.email) { %>
+                <p class="register-error">
+                    <%= errors.email.msg %>
+                </p>
+            <% } %>
+            <br>
+            <div class="inp"><input type="password" name="password" placeholder="CONTRASEÑA" required></div>
+            <br>
+            <br>
+            <div class="remember-user"><input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario</div>
+            <br>
+            <br>
+            <button class="h4-login" type="submit">INICIAR SESION</button>
+        </form>
+        <form class="registro">
+            <h4>¿NECESITAS UNA CUENTA?</h4>
+            <br>
+            <a href="/user/register" class="a-login">REGISTRATE</a>
+        </form>
+    </main>
+
+    <%- include('partials/footer') %>
+    
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+/* Reset de estilos y estilos generales */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 8vh;
+  background-image: url(/img/bannerheaderSiesta.jpg);
+  background-size:cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilos del encabezado */
+
+header {
+  position: absolute;
+  height: auto;
+}
+
+.overflow-x{
+  color: #fff;
+  padding: 30px
+}
+
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo img {
+  width: 150px; 
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  margin: 10vw 0;
+  position: relative;
+}
+
+#products-button {
+  background-color: black; 
+  color: white; 
+  width: 150px; 
+  padding: 10px; 
+  display: inline-block;
+  text-align: center;
+  border: move ;
+  cursor: pointer;
+}
+
+
+/* Estilos del pie de página */
+.footer-social {
+  display: block;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.social {
+  margin-bottom: 30px;
+}
+
+.social a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 30px;
+}
+
+/* Estilos de íconos Font Awesome */
+.fa-truck {
+  color: #000;
+}
+
+/* Estilos del encabezado */
+.header {
+  padding: 20px 0;
+  position: relative; /* Añade posición relativa para posicionar el banner */
+}
+
+/* Nueva clase para el banner*/
+.banner {
+  position: absolute;
+  top: 50%; /* Centra verticalmente en relación con el encabezado */
+  left: 50%; /* Centra horizontalmente en relación con el encabezado */
+  transform: translate(-50%, -50%); /* Centra exactamente */
+  max-width: 100%; /* Ajusta el ancho según sea necesario */
+  height: auto; /* Mantiene la proporción de aspecto */
+}
+
+.banner img {
+  max-width: 100%;
+  height: auto;
+}

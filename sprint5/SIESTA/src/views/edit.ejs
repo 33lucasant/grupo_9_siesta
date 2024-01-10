@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head', {Title: 'Edit'}) %>
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <div class="form-edit">
+
+        <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+
+            <h1>EDITAR PRODUCTO</h1>
+
+            <input type="text" name="name" placeholder="Nombre" value="<%= productToEdit.name %>">
+            <br>
+
+            <input type="text" name="price" placeholder="Precio" value="<%= productToEdit.price %>">
+            <br>
+
+            <textarea name="description" cols="30" rows="10" placeholder="Descripción"><%= productToEdit.description %></textarea>
+            <br>
+
+            <label>Imagenes</label>
+            <br>
+            <input type="file" id="img" name="images" placeholder="Imagen" multiple>
+            <br>
+
+            <input type="text" name="colors" placeholder="Color" value="<%= productToEdit.colors %>">
+            <br>
+
+            <input type="text" name="size1" placeholder="Talle" value="<%= productToEdit.size1 %>">
+            <br>
+            <input type="text" name="size2" placeholder="Talle" value="<%= productToEdit.size2 %>">
+            <br>
+            <input type="text" name="size3" placeholder="Talle" value="<%= productToEdit.size3 %>">
+            <br>
+            <input type="text" name="size4" placeholder="Talle" value="<%= productToEdit.size4 %>"> 
+            <br>
+
+            <button type="submit" class="btn btn-dark">EDITAR</button>
+        </form>
+    </div>
+
+    <%- include('partials/footer') %>
+
+</body>
+</html>

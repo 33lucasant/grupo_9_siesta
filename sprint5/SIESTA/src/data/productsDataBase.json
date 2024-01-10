@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Blazer straight fit",
+    "price": "50000",
+    "description": "Blazer straight fit confeccionada en tejido de algodón. Cuello con solapas de muesca y manga larga. Bolsillo de vivo en pecho y de solapa en cadera. Cierre frontal de botonadura.",
+    "colors": "Marrón / Topo | 4387/30",
+    "size1": "S",
+    "size2": "M",
+    "size3": "L",
+    "size4": "XL",
+    "images": [
+      "IMG-1701889447692.jpg",
+      "IMG-1701889447828.jpg",
+      "IMG-1701889447837.jpg",
+      "IMG-1701889447845.jpg",
+      "IMG-1701889447855.jpg",
+      "IMG-1701889447867.jpg"
+    ],
+    "genre": "men"
+  },
+  {
+    "id": 2,
+    "name": "Camisa satinada botón",
+    "price": "15000",
+    "description": "Camisa satinada de cuello solapa y manga larga acabada en vuelta con botón. Cierre frontal con botones ocultos por solapa.",
+    "colors": "Rosa | 8616/845",
+    "size1": "XS",
+    "size2": "S",
+    "size3": "M",
+    "size4": "L",
+    "genre": "women",
+    "images": [
+      "IMG-1704699881719.jpg",
+      "IMG-1704699881720.jpg",
+      "IMG-1704699881721.jpg",
+      "IMG-1704699881722.jpg",
+      "IMG-1704699881723.jpg",
+      "IMG-1704699881724.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Cazadora acolchada water repellent",
+    "price": "30000",
+    "description": "Cazadora acolchada confeccionada en tejido técnico con acabado water repellent. Cuello subido y manga larga. Bolsillos frontales de vivo y detalle de bolsillo interior. Bajo acabado con elástico. Cierre frontal con cremallera oculta por solapa con botones a presión.",
+    "colors": "Marrón vigoré | 7380/657",
+    "size1": "S",
+    "size2": "M",
+    "size3": "L",
+    "size4": "XL",
+    "genre": "men",
+    "images": [
+      "IMG-1704859312427.jpg",
+      "IMG-1704859312470.jpg",
+      "IMG-1704859312474.jpg",
+      "IMG-1704859312475.jpg",
+      "IMG-1704859312476.jpg",
+      "IMG-1704859312477.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Chaqueta larga acolchada ZW collection",
+    "price": "50000",
+    "description": "Chaqueta acolchada larga con capucha ajustable con cordones. Manga larga con elástico interior. Bolsillos con solapa en delantero. Cierre frontal con botones a presión.",
+    "colors": "Oliva | 0518/255",
+    "size1": "XS",
+    "size2": "S",
+    "size3": "M",
+    "size4": "L",
+    "genre": "women",
+    "images": [
+      "IMG-1704859653666.jpg",
+      "IMG-1704859653667.jpg",
+      "IMG-1704859653668.jpg",
+      "IMG-1704859653669.jpg",
+      "IMG-1704859653670.jpg",
+      "IMG-1704859653671.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Pantalón cargo parachute",
+    "price": "23000",
+    "description": "Pantalón de cintura elástica ajustable. Bolsillos frontales y detalle de bolsillos de vivo en espalda. Aplicación de bolsillos plastrón con solapa en delantero. Pliegues en rodillas. Bajo ajustable con elástico en laterales.",
+    "colors": "Negro | 4575/300",
+    "size1": "S",
+    "size2": "M",
+    "size3": "L",
+    "size4": "XL",
+    "genre": "men",
+    "images": [
+      "IMG-1704860073491.jpg",
+      "IMG-1704860073492.jpg",
+      "IMG-1704860073493.jpg",
+      "IMG-1704860073494.jpg",
+      "IMG-1704860073495.jpg",
+      "IMG-1704860073496.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Pantalón recto tiro bajo",
+    "price": "20000",
+    "description": "Pantalón de tiro bajo y cintura con trabillas. Bolsillos laterales y de vivo en espalda. Pierna recta y bajo acabado en línea evasé. Cierre frontal con cremallera y botones.",
+    "colors": "Negro | 4432/517",
+    "size1": "XS",
+    "size2": "S",
+    "size3": "M",
+    "size4": "L",
+    "genre": "women",
+    "images": [
+      "IMG-1704860345857.jpg",
+      "IMG-1704860345858.jpg",
+      "IMG-1704860345859.jpg",
+      "IMG-1704860345860.jpg",
+      "IMG-1704860345861.jpg",
+      "IMG-1704860345862.jpg"
+    ]
+  }
+]

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', {Title: 'Product Detail'}) %>
+
+<body>
+    <%- include('partials/header') %>
+
+    <main class="main">
+
+        <%- include('partials/mobile-product') %>
+
+        <div class="producto-y-descripcion">
+            <%- include('partials/scroll-product') %>
+        
+            <%- include('partials/main-product') %>
+
+            <div class="description-div">
+                <div class="nombre-y-desc-div">
+                    <h4 class="nom-prod"><%= productDetail.name %></h4>
+                    <h4 class="price">$<%= productDetail.price %></h4>
+                    <br>
+                    <p><%= productDetail.description %></p>
+                    <br>
+                </div>
+
+                <div class="talla-div">
+                    <h4><%= productDetail.colors %></h4>
+                    <br>
+                    <h4 class="h4-product">Tallas</h4>
+                    <br>
+                    <div class="tallas">
+                        <button class="button-tallas"><%= productDetail.size1 %></button>
+                        <button class="button-tallas"><%= productDetail.size2 %></button>
+                        <button class="button-tallas"><%= productDetail.size3 %></button>
+                        <button class="button-tallas"><%= productDetail.size4 %></button>
+                    </div>
+                </div>
+
+                <div class="add-to-cart-div">
+                    <a href="#">
+                        <i class="fas fa-cart-plus"></i>
+                    </a>
+                    <a href="/cart">
+                        <p>Add to Cart</p>
+                    </a>
+                </div>
+
+                <div class="buttons">
+                    <a href="/products/edit/<%= productDetail.id %>" class="edit-button">EDITAR</a>
+                    <form action="/products/<%= productDetail.id %>/?_method=DELETE" method="POST" style="display: inline-flex" class="delete-form">
+                        <button type="submit" class="delete-button">ELIMINAR</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <%- include('partials/footer') %>
+
+    <footer class="main-footer">
+        <div class="description-prod">
+            <div class="cart">
+                <a href="/products/cart" class="add-to-cart-1">
+                    <p>Add to Cart</p>
+                </a>
+            </div>
+            <div class="description">
+                <p class="nom-prod"><%= productDetail.name %>&nbsp;&nbsp;&nbsp;</p>
+                <p class="price">$<%= productDetail.price %></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

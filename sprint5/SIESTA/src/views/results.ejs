@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', {Title: 'Results'}) %>
+<body>
+    <%- include('partials/header') %>
+
+    <section class="product-create">
+        <a href="/products/create">
+            <button class="btn btn-dark">CREAR PRODUCTO</button>
+        </a>
+    </section>
+
+    <main class="products-main">
+        <div class="products-div">
+            <div class="products">
+                <% productsResult.forEach(product => { %>
+                    <a href="/products/detail/<%= product.id %>" class="product-a">
+                        <article class="product-article">
+                            <img src="/img/products/<%= product.images[0] %>">
+                            <div class="div-product-description">
+                                <p><%= product.name %></p>
+                                <p>$<%= product.price %></p>
+                            </div>
+                        </article>
+                    </a>
+                <% }) %>
+            </div>
+            
+        </div>
+
+        <div class="invalid-product">
+            <% if (productsResult.length === 0)  { %>
+                <h2 class="products-title" style="color: tomato;">No hay productos que coincidan con esa búsqueda</h2>
+            <% } %>
+        </div>
+    </main>
+
+    <%- include('partials/footer') %>
+
+</body>
+</html>

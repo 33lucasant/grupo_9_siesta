@@ -4,11 +4,13 @@
 <body>
     <%- include('partials/header') %>
 
-    <section class="product-create">
-        <a href="/products/create">
-            <button class="btn btn-dark">CREAR PRODUCTO</button>
-        </a>
-    </section>
+    <% if (locals.isLogged) { %>
+        <section class="product-create">
+            <a href="/products/create">
+                <button class="btn btn-dark">CREAR PRODUCTO</button>
+            </a>
+        </section>
+    <% } %>
 
     <main class="products-main">
         <div class="products-div">

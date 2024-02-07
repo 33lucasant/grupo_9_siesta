@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head', {Title: 'Edit user'}) %>
+
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <main class="edit-user-main">
+        <form action="/user/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <h4>DATOS PERSONALES</h4>
+            <br>
+            <div class="inp">
+                <input 
+                    type="text"
+                    placeholder="E-MAIL" 
+                    name="email"
+                    class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                    value="<%= user.email %>"
+                >
+            </div>
+            <br>
+            <% if (locals.errors && errors.email) { %>
+                <p class="register-error">
+                    <%= errors.email.msg %>
+                </p>
+            <% } %>
+            <br>
+            <div class="inp">
+                <input 
+                    type="text" 
+                    placeholder="NOMBRE" 
+                    name="first_name"
+                    class="form-control <%= locals.errors && errors.firstName ? 'is-invalid' : null %>"
+                    value="<%= user.first_name %>"
+                >
+            </div>
+            <br>
+            <% if (locals.errors && errors.first_name) { %>
+                <p class="register-error">
+                    <%= errors.first_name.msg %>
+                </p>
+            <% } %>
+            <br>
+            <div class="inp">
+                <input 
+                    type="text" 
+                    placeholder="APELLIDO" 
+                    name="last_name"
+                    class="form-control <%= locals.errors && errors.last_name ? 'is-invalid' : null %>"
+                    value="<%= user.last_name %>"
+                >
+            </div>
+            <br>
+            <% if (locals.errors && errors.last_name) { %>
+                <p class="register-error">
+                    <%= errors.last_name.msg %>
+                </p>
+            <% } %>
+            <br>
+            <label for="avatar" id="avatar-label">IMAGEN DE PERFIL</label>
+            <br>
+            <br>
+            <div class="inp"><input type="file" name="avatar" id="avatar"></div>
+            <br>
+            <% if (locals.errors && errors.avatar) { %>
+                <p class="register-error">
+                    <%= errors.avatar.msg %>
+                </p>
+            <% } %>
+            <br>      
+            <button type="submit" class="btn-with-movement"><span class="text">CONFIRMAR</span><span>EDICIÓN</span></button>
+        </form>
+    </main>
+
+
+    <%- include('partials/footer') %>
+    
+</body>
+
+</html>

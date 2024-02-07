@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head', {Title: 'Create Product'}) %>
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <div class="form-create">
+
+        <form action="/products" method="POST" enctype="multipart/form-data">
+
+            <h1>CREAR PRODUCTO</h1>
+
+            <input type="text" name="name" placeholder="Nombre">
+            <br>
+
+            <input type="number" name="price" placeholder="Precio">
+            <br>
+
+            <textarea name="description" cols="33" rows="10" placeholder="Descripción"></textarea>
+            <br>
+
+            <label>Imagenes</label>
+            <br>
+            <input type="file" id="img" name="image" multiple>
+            <br>
+        
+            <input type="text" name="color" placeholder="Color">
+            <br>
+            
+            <label for="sizes">Talles (Ingresar los talles separados por una coma)</label>
+            <br>
+            <input type="text" name="size">
+            <br>
+
+            <label for="category">Categorías</label>
+            <div class="genre-radio">
+                <input type="radio" name="category" value="Hombre">Hombre
+                <input type="radio" name="category" value="Mujer">Mujer
+            </div>
+
+            <button type="submit" class="btn-with-movement"><span class="text">CREAR</span><span>PRODUCTO</span></button>
+        </form>
+
+    </div>
+
+    <%- include('partials/footer') %>
+
+</body>
+</html>

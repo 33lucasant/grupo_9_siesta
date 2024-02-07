@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head', {Title: 'Edit Role'}) %>
+
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <main class="edit-user-role-main">
+        <form action="/user/edit-role/<%= user.id %>?_method=PUT" method="POST">
+            <% if (user.role_id == 1) { %>
+                <h4>¿Desea cambiar el rol del usuario a CLIENTE?</h4>
+                <br>
+                <input type="radio" name="role_id" value="2">Sí
+                <input type="radio" name="role_id" value="1">No
+                <br>
+            <% } else { %>
+                <h4>¿Desea cambiar el rol del usuario a ADMINISTRADOR?</h4>
+                <br>
+                <input type="radio" name="role_id" value="1">Sí
+                <input type="radio" name="role_id" value="2">No
+                <br>
+            <% } %>
+            <button type="submit" class="btn-with-movement"><span class="text">CONFIRMAR</span><span>EDICIÓN</span></button>
+        </form>
+    </main>
+
+
+    <%- include('partials/footer') %>
+    
+</body>
+
+</html>

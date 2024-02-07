@@ -1,0 +1,23 @@
+.carousel {
+    display: none;
+}
+
+.banner-mobile {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.banner-mobile img {
+    width: 100%;
+}
+
+@media (min-width: 1200px) {
+    .carousel {
+        display: block;
+    }
+
+    .banner-mobile {
+        display: none;
+    }
+}

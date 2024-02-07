@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" style="padding: 0;">
+
+  <%- include('partials/head', {Title: 'Home'}) %>
+
+  <body style="padding: 0;">
+
+    <div class="banner-mobile" style="padding: 0;">
+      <img src="/img/Banner mobile.jpg">
+      <a href="/products" class="btn-with-movement" style="position: absolute; bottom: 15%; left: 42%; z-index: 300; width: 20%; text-align: center;"><span class="text">TIENDA</span><span>PRODUCTOS</span></a>
+    </div>
+
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="5000" id="item1">
+          <a href="/products" class="btn-with-movement" style="position: absolute; top: 400px; left: 100px; z-index: 300; width: 150px; text-align: center;"><span class="text">TIENDA</span><span>PRODUCTOS</span></a>
+          <img src="/img/Banner SIESTA.jpg" class="home-img">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="/img/Banner SIESTA MEN.jpg">
+        </div>
+        <div class="carousel-item" id="item3">
+          <img src="/img/Banner SIESTA WOMEN.jpg">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+      
+    </main>   
+  </body>
+</html>

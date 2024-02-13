@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles-cart.css"> </link>
     <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> 
     <meta name = "viewport" content="width = device-width, inicial-escale = 1">
     <link rel="icon" href="/img/LOGO_siesta2.ico">
     <title>Carrito - SIESTA, Argentina </title>
@@ -12,58 +13,57 @@
 
 <body>
     <header>
-        <div class="main-header">
+        <div class="container-icon">
             <a href="/"><img src="/img/LOGO_siesta.png" class="logo"></a>
-        </div>     
+        </div>   
+        <div class="back">
+            <p> Presiona <a href="/products">aquí</a> para <br>
+                 seguir comprando</p>
+        </div>
     </header>
-    
     <div class="contenedor-de-secciones">
         <div class="container"> 
-            <h2 class="carrito"> CARRITO </h2>
+            <h2 class="carrito"> TU CARRITO (3) </h2>
         </div>
-        <div class="container-2"> 
+        <div class="container"> 
             <h2 class="favoritos"></i> FAVORITOS </h2>
         </div>    
     </div>
-
-    <div class="contenedor-2">
-        <article class="articulo">
-            <img src="https://static.zara.net/photos///2023/S/0/1/p/3772/300/731/2/w/563/3772300731_1_1_1.jpg?ts=1690384445853" alt="SIESTA product">
-            <div class="description">
-                <p> 
-                    MONO CORTO RAYAS <br> 
-                    71.990,00 ARS <br> <br>
-                    M | BEIGE OSCURO
-                </p>
-                <button> - | (1) | + </button>
+    <div class="container-items">
+        <div class="item">
+            <figure>
+                <img src="/img/WOMEN CAMISOLE.jpg" alt="Siesta product">
+            </figure>
+            <div class="info-product">
+                <h2> METALLIC CAMISOLE </h2>
+                <p class="price"> 69,990.00 ARS </p>
+                <button id="delete"> ELIMINAR DEL CARRITO </button>
+                <button id="add"> AGREGAR MÁS + </button>
             </div>
-        </article>
-
-        <article class="articulo">
-            <img src= "/img/articulo-2.jpg" alt="SIESTA product">
-            <div class="description">
-                <p> 
-                    TRENCH OVERSIZE TRABILLAS <br> 
-                    149.990,00 ARS <br> <br>
-                    M | ARENA
-                </p>
-                <button> - | (1) | + </button>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="/img/MEN DENIM.jpg" alt="Siesta product">
+            </figure>
+            <div class="info-product">
+                <h2> DENIM OVERSHIRT </h2>
+                <p class="price">  125,990.00 ARS </p>
+                <button id="delete"> ELIMINAR DEL CARRITO </button>
+                <button id="add"> AGREGAR MÁS + </button>
             </div>
-        </article>
-
-        <article  class="articulo">
-            <img src="/img/articulo-3.jpg" alt="SIESTA product" class="imagen-3">
-            <div class="description">
-                <p> 
-                    BLAZER TRAJE CUADROS <br> 
-                    149.990,00 ARS <br> <br>
-                    46 | AZUL
-                </p>
-                <button> - | (1) | + </button>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="/img/women jacket.jpg" alt="Siesta product">
+            </figure>
+            <div class="info-product">
+                <h2>  FAUX LEATHER JACKET </h2>
+                <p class="price"> 155,990.00 ARS </p>
+                <button id="delete"> ELIMINAR DEL CARRITO </button>
+                <button id="add"> AGREGAR MÁS + </button>
             </div>
-        </article>
+        </div>
     </div>
-            
     <footer>
         <div class="final"> 
             <p> /// ARGENTINA /// <br> <br> <br>

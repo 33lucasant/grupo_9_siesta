@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head', {Title: 'Profile'}); %>
+<body>
+	<%- include('partials/header'); %>
+	
+	
+	<div class="user-profile-div">
+
+		<h4>Imagen de Perfil</h4>
+		<br>
+		<div class="user-image">
+			<img src="/img/avatars/<%= locals.userLogged.avatar %>">
+		</div>
+
+		<div class="user-profile">
+			<div class="user-profile-data">
+				NOMBRE:
+				<br>
+				<br>
+				APELLIDO:
+				<br>
+				<br>
+				EMAIL:
+			</div>
+			
+			<div class="user-profile-info">
+				<%= locals.userLogged.first_name %>
+				<br>
+				<br>
+				<%= locals.userLogged.last_name %>
+				<br>
+				<br>
+				<%= locals.userLogged.email %>
+			</div>
+		</div>
+		
+		<a href="/user/edit/<%= locals.userLogged.id %>" class="btn-with-movement"><span class="text">EDITAR</span><span>USUARIO</span></a>
+		<a href="/user/edit/<%= locals.userLogged.id %>" class="btn-mobile">EDITAR USUARIO</a>
+	</div>
+
+	<%- include('partials/footer') %>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head', {Title: 'Create Product'}) %>
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <div class="form-create">
+
+        <form action="/products" method="POST" enctype="multipart/form-data">
+
+            <h1>CREAR PRODUCTO</h1>
+
+            <input type="text" name="name" placeholder="Nombre">
+            <br>
+            <% if (locals.errors && errors.name) { %>
+                <p class="register-error">
+                    <%= errors.name.msg %>
+                </p>
+            <% } %>
+            <br>
+
+            <input type="number" name="price" placeholder="Precio">
+            <br>
+            <% if (locals.errors && errors.products) { %>
+                <p class="register-error">
+                    <%= errors.price.msg %>
+                </p>
+            <% } %>
+            <br>
+
+            <textarea name="description" cols="33" rows="10" placeholder="Descripción"></textarea>
+            <br>
+            <% if (locals.errors && errors.description) { %>
+                <p class="register-error">
+                    <%= errors.description.msg %>
+                </p>
+            <% } %>
+            <br>
+
+            <label>Imagenes</label>
+            <br>
+            <input type="file" id="img" name="image" multiple>
+            <br>
+            <% if (locals.errors && errors.image) { %>
+                <p class="register-error">
+                    <%= errors.image.msg %>
+                </p>
+            <% } %>
+            <br>
+        
+            <input type="text" name="color" placeholder="Color">
+            <br>
+            <% if (locals.errors && errors.color) { %>
+                <p class="register-error">
+                    <%= errors.color.msg %>
+                </p>
+            <% } %>
+            <br>
+            
+            <label for="sizes">Talles (Ingresar los talles separados por una coma)</label>
+            <br>
+            <input type="text" name="size">
+            <br>
+            <% if (locals.errors && errors.size) { %>
+                <p class="register-error">
+                    <%= errors.size.msg %>
+                </p>
+            <% } %>
+            <br>
+
+            <label for="category">Categorías</label>
+            <div class="genre-radio">
+                <input type="radio" name="category" value="Hombre">Hombre
+                <input type="radio" name="category" value="Mujer">Mujer
+            </div>
+
+            <button type="submit" class="btn-with-movement"><span class="text">CREAR</span><span>PRODUCTO</span></button>
+            <button type="submit" class="btn-mobile">CREAR PRODUCTO</button>
+        </form>
+
+    </div>
+
+    <%- include('partials/footer') %>
+
+</body>
+</html>

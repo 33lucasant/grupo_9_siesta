@@ -18,7 +18,10 @@
                     class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
                     value="<%= locals.oldData ? oldData.email : null %>"
                 >
+                <span class="error-msg"></span>
             </div>
+            <br>
+            <div id="error-email"></div>
             <br>
             <% if (locals.errors && errors.email) { %>
                 <p class="register-error">
@@ -33,7 +36,10 @@
                     name="password" 
                     class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
                 >
+                <span class="error-msg"></span>
             </div>
+            <br>
+            <div id="error-password"></div>
             <br>
             <% if (locals.errors && errors.password) { %>
                 <p class="register-error">
@@ -46,10 +52,14 @@
                     type="text" 
                     placeholder="NOMBRE" 
                     name="first_name"
-                    class="form-control <%= locals.errors && errors.firstName ? 'is-invalid' : null %>"
+                    class="form-control <%= locals.errors && errors.first_name ? 'is-invalid' : null %>"
                     value="<%= locals.oldData ? oldData.firstName : null %>"
                 >
+                <span class="error-msg"></span>
             </div>
+            
+            <br>
+            <div id="error-first_name"></div>
             <br>
             <% if (locals.errors && errors.first_name) { %>
                 <p class="register-error">
@@ -65,7 +75,10 @@
                     class="form-control <%= locals.errors && errors.last_name ? 'is-invalid' : null %>"
                     value="<%= locals.oldData ? oldData.last_name : null %>"
                 >
+                <span class="error-msg"></span>
             </div>
+            <br>
+            <div id="error-last_name"></div>
             <br>
             <% if (locals.errors && errors.last_name) { %>
                 <p class="register-error">
@@ -77,6 +90,8 @@
             <br>
             <br>
             <div class="inp"><input type="file" name="avatar" id="avatar"></div>
+            <br>
+            <div id="error-avatar"></div>
             <br>
             <% if (locals.errors && errors.avatar) { %>
                 <p class="register-error">
@@ -92,6 +107,7 @@
 
     <%- include('partials/footer') %>
     
+    <script src="/js/register-form.js"></script>
 </body>
 
 </html>

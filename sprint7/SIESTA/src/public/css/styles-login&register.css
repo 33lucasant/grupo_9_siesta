@@ -68,11 +68,18 @@ body main .registro{
     text-align: center;
 }
 
-main form .inp input{
+.inp {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.inp input {
     border-color: white;
     border: 1px solid white;
-    width: 85%;
+    width: 35%;
     border-bottom: 1px solid black;
+    margin-right: 50px;
 }
 
 main form .recuperar{
@@ -88,6 +95,39 @@ main form .recuperar{
     display: none;
 }
 
+.inp-invalid {
+    border-color: white;
+    border: 1px solid white;
+    width: 85%;
+    border-bottom: 1px solid red;
+}
+
+.is-invalid {
+    color: red;
+}
+
+.submit-invalid {
+    color: red;
+    /*background-color: #ffd2d2;*/
+    width: fit-content;
+    padding: 0 10px;
+    border: 1px dotted red;
+}
+
+.submit-invalid i {
+    margin-right: 10px;
+}
+
+.validation-register-errors {
+    background-color: #ffd2d2;
+    width: f;
+    height: fit-content;
+    border-radius: 15px;
+}
+
+.validation-register-errors li {
+    color: red;
+}
 
 
 /*MEDIA*/
@@ -145,7 +185,7 @@ main form .recuperar{
 
     body main .datos{
         text-align: start;
-        width: 40%;
+        width: 80%;
         margin: 10%;
     }
 

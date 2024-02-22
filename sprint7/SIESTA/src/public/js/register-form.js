@@ -8,6 +8,10 @@ const isEmail = (input) => {
         return false;
     }
 };
+function hasExtension(input, exts) {
+    exts = ['.jpg', '.gif', '.png', '.jpeg'];
+    return (new RegExp('(' + exts.join('|').replace(/\./g, '\\.') + ')$')).test(input.value)
+}
 
 const validations = [
     {
@@ -61,6 +65,19 @@ const validations = [
                 errorMsg: "El apellido debe tener al menos 2 caracteres"
             }
         ]
+    },
+    {
+        inputName: "avatar",
+        validations: [
+            {
+                validator: isEmpty,
+                errorMsg: "El avatar no puede estar vacío"
+            },
+            {
+                validator: hasExtension,
+                errorMsg: "El formato del avatar debe ser .jpg, .gif, .png o .jpeg"
+            }
+        ]
     }
 ];
 
@@ -85,7 +102,8 @@ window.addEventListener('load', function() {
                     return
                 }
             }
-            document.querySelector('.validation-register-errors').innerText = ``;
+            input.parentElement.querySelector('.error-msg').innerText = null;
+            input.parentElement.querySelector('.error-msg').classList.remove('submit-invalid');
         })
 
         if (errors.length == 0) {
@@ -151,15 +169,29 @@ window.addEventListener('load', function() {
                     errorMsg.style.display = 'none'
                 }
 
+            } else if (input.name == 'avatar') {
+
+                if (!hasExtension(input)) {
+
+                    input.style.borderBottomColor = "red"
+
+                    errorMsg.innerHTML = 'El formato del avatar debe ser .jpg, .gif, .png o .jpeg';
+                    errorMsg.style.display = 'block'
+                    errorMsg.classList.add('is-invalid')
+
+                } else {
+                    input.style.borderBottomColor = "black"
+
+                    errorMsg.style.display = 'none'
+                }
+
             } else {
                 input.style.borderBottomColor = "black"
 
                 errorMsg.style.display = 'none'
             }
 
-
         })
-
     });
 
 })

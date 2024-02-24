@@ -130,27 +130,35 @@ const usersController = {
 
 	update: async (req, res) => {
 		try {
-			
-			if (req.file.filename) {
+			if (!req.file) {
+
+				const userToEdit = await db.User.findByPk(req.params.id);
+
+				const userEdited = {
+					first_name: req.body.first_name,
+					last_name: req.body.last_name,
+					email: req.body.email,
+					avatar: userToEdit.avatar
+				}
+
+				await db.User.update(userEdited, {
+					where: {id: req.params.id}
+				})
+
+			} else {
+
 				const userEdited = {
 					first_name: req.body.first_name,
 					last_name: req.body.last_name,
 					email: req.body.email,
 					avatar: req.file.filename
 				}
-			} else {
-				const userEdited = {
-					first_name: req.body.first_name,
-					last_name: req.body.last_name,
-					email: req.body.email,
-				}
+
+				await db.User.update(userEdited, {
+					where: {id: req.params.id}
+				})
 			}
 			
-
-			db.User.update(userEdited, {
-				where: {id: req.params.id}
-			})
-
 			res.redirect('/user/profile');
 		} catch (error) {
 			console.log(error)

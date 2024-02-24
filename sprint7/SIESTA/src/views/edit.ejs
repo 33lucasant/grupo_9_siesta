@@ -10,18 +10,27 @@
 
             <h1>EDITAR PRODUCTO</h1>
 
-            <input type="text" name="name" placeholder="Nombre" value="<%= productToEdit.name %>">
+            <div>
+                <input type="text" name="name" placeholder="Nombre" value="<%= productToEdit.name %>"> <span class="error-msg"></span>
+            </div>
             <br>
 
-            <input type="text" name="price" placeholder="Precio" value="<%= productToEdit.price %>">
+            <div>
+                <input type="text" name="price" placeholder="Precio" value="<%= productToEdit.price %>"> <span class="error-msg"></span>
+            </div>
             <br>
+           
 
-            <textarea name="description" cols="30" rows="10" placeholder="Descripción"><%= productToEdit.description %></textarea>
+            <div>
+                <textarea name="description" cols="30" rows="10" placeholder="Descripción" id="desc-textarea"><%= productToEdit.description %></textarea> <span class="error-msg"></span>
+            </div>
             <br>
 
             <label>Imagenes</label>
             <br>
-            <input type="file" id="img" name="images" placeholder="Imagen" multiple>
+            <div>
+                <input type="file" id="img" name="images" placeholder="Imagen" multiple> <span class="error-msg"></span>
+            </div>
             <br>
 
             <input type="text" name="color" placeholder="Color" value="<%= productToEdit.color %>">
@@ -44,6 +53,6 @@
     </div>
 
     <%- include('partials/footer') %>
-
+    <script src="/js/product-edit-form.js"></script>
 </body>
 </html>

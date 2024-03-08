@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', {Title: 'Users'}) %>
+<body>
+    <%- include('partials/header') %>
+
+    <main class="users-list-main">
+        <h1>Lista de Usuarios</h1>
+        
+        <div class="users-list">
+            <% users.forEach(user => { %>
+                <div class="user-card">
+                    <div class="user-avatar">
+                        <img src="/img/avatars/<%= user.avatar %>">
+                    </div>
+                    <div class="user-data">
+                        <p><%= user.first_name + ' ' + user.last_name %></p>
+                        <p><%= user.roles.role %></p>
+                    </div>
+                    
+                    <div class="edit-remove-user-buttons">
+                        <a href="/user/edit-role/<%= user.id %>" class="edit-user-role">EDITAR</a>
+                        <form style="width: 50%; height: 100%;" action="/user/<%= user.id %>/?_method=DELETE" method="POST">
+                            <button type="submit" class="remove-user-btn" >ELIMINAR</button>
+                        </form>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+        
+        </div>
+    </main>
+
+    <%- include('partials/footer') %>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', {Title: 'Women'}) %>
+<body class="bodyWomen">
+    <%- include('partials/header') %>
+
+    <main class="products-main">
+        <div class="products-div">
+            <div class="products">
+                <% productsForWomen.forEach(product => { %>
+                    <a href="/products/detail/<%= product.id %>" class="product-a">
+                        <article class="product-article">
+                            <img src="/img/products/<%= product.images[0].image %>">
+                            <div class="div-product-description">
+                                <p><%= product.name %></p>
+                                <p>$<%= product.price %></p>
+                            </div>
+                        </article>
+                    </a>
+                <% }) %>
+            </div>
+            
+        </div>
+    </main>
+
+    <%- include('partials/footer') %>
+
+
+
+</body>
+</html>

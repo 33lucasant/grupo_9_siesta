@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head', {Title: 'Login'}) %>
+
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <main class="login-main">
+        <form action="/user/login" method="POST" class="acceso">
+            <h4 class="h4-login">ACCEDE A TU CUENTA</h4>
+            <br>
+            <div class="inp">
+                <input type="text" placeholder="E-MAIL" name="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>">
+                <span class="error-msg"></span>
+            </div>
+            <br>
+            <div id="error-email"></div>
+            <br>
+            <% if (locals.errors && errors.email) { %>
+                <p class="login-error">
+                    <%= errors.email.msg %>
+                </p>
+            <% } %>
+            <br>
+            <div class="inp">
+                <input type="password" placeholder="CONTRASEÑA" name="password" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>">
+                <span class="error-msg"></span>
+            </div>
+            <br>
+            <div id="error-password"></div>
+            <br>
+            <% if (locals.errors && errors.password) { %>
+                <p class="login-error">
+                    <%= errors.password.msg %>
+                </p>
+            <% } %>
+            <br>
+            <div class="remember-user"><input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario</div>
+            <br>
+            <br>
+            <button type="submit" class="btn-with-movement"><span class="text">INICIAR</span><span>SESIÓN</span></button>
+            <button type="submit" class="btn-mobile">INICIAR SESIÓN</button>
+        </form>
+        <form class="registro">
+            <h4>¿NECESITAS UNA CUENTA?</h4>
+            <br>
+            <a href="/user/register" class="a-login">REGISTRATE</a>
+        </form>
+    </main>
+
+    <%- include('partials/footer') %>
+    <script src="/js/login-form.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,311 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*BODY*/
+html, body{
+    font-family: 'Roboto Flex', sans-serif;
+    height: 100%;
+}
+
+/*HEADER*/
+.top-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1%;
+}
+
+body header div a img{
+    width: 30%;
+}
+
+.enlaces{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1%;
+}
+
+.burger-menu{
+    display: block;
+}
+
+.logo{
+    display: none;
+}
+
+header .form {
+    display: none;
+    align-items: center;
+    padding: 2px;
+    font-size: 11px;
+    width: 50%;
+    border: 1px solid black;
+    background-color: #FFF;
+    justify-content: space-between;
+}
+
+
+/*MAIN*/
+.register-main, .login-main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body main .acceso,
+body main .datos{
+    margin: auto;
+    margin-top: 10%;
+    text-align: center;
+}
+
+body main .registro{
+    margin:auto;
+    text-align: center;
+}
+
+.inp {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.inp input {
+    border-color: white;
+    border: 1px solid white;
+    width: 35%;
+    border-bottom: 1px solid black;
+    margin-right: 50px;
+}
+
+.acceso .inp input {
+    width: 42%;
+}
+
+main form .recuperar{
+    font-size: 70%;
+}
+
+.checkbox{
+    display: flex;
+    width: 100%;
+}
+
+.avatar-icon {
+    display: none;
+}
+
+.inp-invalid {
+    border-color: white;
+    border: 1px solid white;
+    width: 85%;
+    border-bottom: 1px solid red;
+}
+
+.is-invalid {
+    color: red;
+}
+
+.submit-invalid {
+    color: red;
+    /*background-color: #ffd2d2;*/
+    width: fit-content;
+    padding: 0 10px;
+    border: 1px dotted red;
+}
+
+.submit-invalid i {
+    margin-right: 10px;
+}
+
+.validation-register-errors {
+    background-color: #ffd2d2;
+    width: f;
+    height: fit-content;
+    border-radius: 15px;
+}
+
+.validation-register-errors li {
+    color: red;
+}
+
+
+/*MEDIA*/
+@media (min-width: 368px) {
+    
+    main form.registro{
+        margin-top: 10%;
+    }
+
+    main form .recuperar{
+        font-size: 80%;
+    }
+
+    header .form{
+        display: flex;
+    }
+
+    header div.form{
+        display: flex;
+        border: 1px solid black;
+        width: 40%;
+        height: 10%;
+        justify-content: space-between;
+    }
+
+    .enlaces{
+        width: 20%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .logo{
+        display: block;
+    }
+
+    .footer-container{
+        display: none;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    body main .acceso{
+        text-align: start;
+        width: 40%;
+    }
+    body main .registro{
+        text-align: start;
+        width: 40%;
+    }
+
+    main form .recuperar{
+        font-size: 100%;
+    }
+
+    body main .datos{
+        text-align: start;
+        width: 80%;
+        margin: 10%;
+    }
+
+    .avatar-icon {
+        display: block;
+        margin: 0 10px;
+        list-style: none;
+    }
+    
+    .avatar-icon img {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+    }
+    
+    
+    .avatar-icon ul {
+        margin: 5px 10px 0 0;
+        text-align: center;
+    }
+    
+}
+
+.a-login {
+    text-decoration: none;
+    color: #000000;
+    border: 1px solid black;
+    text-align: center;
+    padding: 7.15px 197.9px;
+}
+
+.a-login:hover {
+    color:darkgrey;
+}
+
+#avatar {
+    border: none;
+}
+
+#avatar-label {
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.register-main {
+    min-height: 60vh;
+}
+
+.login-main {
+    min-height: 76vh;
+}
+
+.register-error {
+    font-size: 12px;
+    color: #7d1500;
+}
+
+.remember-user {
+    font-size: 14px;
+}
+
+.remember-user input {
+    margin-right: 10px;
+}
+
+
+.user-profile-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 55px;
+    margin-top: 30px;
+}
+
+.user-profile-div h1, .user-profile-div h4 {
+    margin-bottom: 30px;
+}
+
+.user-image {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 300px;
+    height: 300px;
+    border-radius:200px;
+    overflow: hidden;
+    box-shadow: 0px 0px 8px 6px rgba(0,0,0,0.1);
+}
+
+.user-image img {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius:200px;
+}
+
+.user-profile {
+    width: 400px;
+    margin: 45px 0 45px 0;
+    padding: 20px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 0px 8px 6px rgba(0,0,0,0.1);
+}
+
+.user-profile-data {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.user-profile-info {
+    padding: 20px;
+}
+
+.btn:hover {
+    color: grey;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../assets/images/LOGO-siesta2.png';
+import image from '../assets/images/Siesta2.png';
 import ContentWrapper from './ContentWrapper';
 import Products from './Products';
 import ContentRowCards from './ContentRowCards';

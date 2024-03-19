@@ -14,7 +14,7 @@
                 <input type="text" name="name" placeholder="Nombre"  id="nombre">
                 <br>
                 <% if (locals.errors && errors.name) { %>
-                    <p class="register-error">
+                    <p class="edit-error">
                         <%= errors.name.msg %>
                     </p>
                 <% } %>
@@ -26,7 +26,7 @@
                 <input type="number" name="price" placeholder="Precio">
                 <br>
                 <% if (locals.errors && errors.price) { %>
-                    <p class="register-error">
+                    <p class="edit-error">
                         <%= errors.price.msg %>
                     </p>
                 <% } %>
@@ -39,7 +39,7 @@
                 <textarea name="description" cols="30" rows="10" placeholder="Descripción" id="textarea"></textarea>
                 <br>
                 <% if (locals.errors && errors.description) { %>
-                    <p class="register-error">
+                    <p class="edit-error">
                         <%= errors.description.msg %>
                     </p>
                 <% } %>
@@ -51,7 +51,7 @@
                     <input type="file" id="img" name="image" multiple>
                     <br>
                     <% if (locals.errors && errors.image) { %>
-                        <p class="register-error">
+                        <p class="edit-error">
                             <%= errors.image.msg %>
                         </p>
                     <% } %>
@@ -62,7 +62,7 @@
                 <input type="text" name="color" placeholder="Color">
                 <br>
                 <% if (locals.errors && errors.color) { %>
-                    <p class="register-error">
+                    <p class="edit-error">
                         <%= errors.color.msg %>
                     </p>
                 <% } %>
@@ -75,7 +75,7 @@
                 <input type="text" name="size">
                 <br>
                 <% if (locals.errors && errors.size) { %>
-                    <p class="register-error">
+                    <p class="edit-error">
                         <%= errors.size.msg %>
                     </p>
                 <% } %>

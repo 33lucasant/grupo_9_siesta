@@ -6,6 +6,7 @@ const authMiddleware = require('../middlewares/authMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const adminMiddleware = require('../middlewares/adminMiddleware');
 const path = require('path');
+const fs = require('fs');
 
 const { body } = require('express-validator');
 
@@ -20,18 +21,37 @@ const validations = [
         .notEmpty().withMessage('Debe completar este campo').bail()
         .isLength({min: 20}).withMessage('La descripción del producto debe tener al menos 20 caracteres'),
     body('image').custom((value, { req }) => {
-        let file = req.files;
-		let acceptedExtensions = ['.jpg', '.png', '.jpeg'];
-		
-		if (file.length != 6) {
-            throw new Error('Tienes que subir 6 imagenes');
-        } else {
-            for (let i = 0; i < file.length; i++) {
-                let fileExtension = path.extname(file[i].originalname);
-                console.log(fileExtension)
-                if (!acceptedExtensions.includes(fileExtension)) {
-                    throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+        const files = req.files;
+
+        // En caso de no subir ninguna imagen, el producto queda con las imagenes anteriores y no se produce ningun error.
+        if (files.length == 0) {
+            return true
+        }
+
+        // Verificar si se subieron 6 imágenes
+        if (files.length !== 6) {
+            for (let i = 0; i < files.length; i++) {
+                fs.unlinkSync(path.join(__dirname, `../../public/img/products/${files[i].filename}`));
+            }
+            throw new Error('Debes subir exactamente 6 imágenes.');
+        }
+
+        // Array de extensiones de archivo permitidas
+        const acceptedExtensions = ['.jpg', '.png', '.jpeg'];
+
+        // Verificar cada archivo
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            const fileExtension = path.extname(file.originalname); // Obtener extensión del archivo en minúsculas
+
+            // Verificar si la extensión es válida
+            if (!acceptedExtensions.includes(fileExtension)) {
+                // Elimina todos los archivos cuando uno no es válido
+                for (i = 0; i < files.length; i++) {
+                    fs.unlinkSync(path.join(__dirname, `../../public/img/products/${files[i].filename}`));
                 }
+                throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}.`);
+
             }
         }
 

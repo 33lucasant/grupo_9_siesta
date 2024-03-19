@@ -3,6 +3,8 @@ const { validationResult } = require('express-validator');
 const db = require('../database/models');
 const { Op } = require("sequelize");
 const sequelize = db.sequelize;
+const fs = require('fs');
+const path = require('path');
 
 const usersController = {
     register: (req, res) => {
@@ -141,11 +143,31 @@ const usersController = {
 					avatar: userToEdit.avatar
 				}
 
+				req.session.userLogged = {
+					id: req.params.id,
+					first_name: req.body.first_name,
+					last_name: req.body.last_name,
+					email: req.body.email,
+					avatar: userToEdit.avatar
+				}
+
 				await db.User.update(userEdited, {
 					where: {id: req.params.id}
 				})
 
 			} else {
+
+				const userToEdit = await db.User.findByPk(req.params.id);
+
+				fs.unlinkSync(path.join(__dirname, `../../public/img/avatars/${userToEdit.avatar}`))
+
+				req.session.userLogged = {
+					id: req.params.id,
+					first_name: req.body.first_name,
+					last_name: req.body.last_name,
+					email: req.body.email,
+					avatar: req.file.filename
+				}
 
 				const userEdited = {
 					first_name: req.body.first_name,
@@ -192,9 +214,13 @@ const usersController = {
 	delete: async (req, res) => {
         try {
 
+			const userToDelete = await db.User.findByPk(req.params.id)
+
             await db.User.destroy({
-                where: {id: req.params.id},
+                where: {id: userToDelete.id},
             });
+
+			fs.unlinkSync(path.join(__dirname, `../../public/img/avatars/${userToDelete.avatar}`))
 
             res.redirect('/user/list');
 

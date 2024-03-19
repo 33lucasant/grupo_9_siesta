@@ -30,6 +30,7 @@
   --danger: #e74a3b;
   --light: #f8f9fc;
   --dark: #5a5c69;
+  --black: #ffffff:
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -1595,6 +1596,11 @@ pre code {
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+}
+.table-responsive h3 {
+  text-align: center;
+  margin: 25px 0;
+  color: black;
 }
 .table-responsive > .table-bordered {
   border: 0;
@@ -3987,6 +3993,7 @@ input[type="submit"].btn-block {
   background-clip: border-box;
   border: 1px solid #e3e6f0;
   border-radius: 0.35rem;
+  width: 100%;
 }
 .card > hr {
   margin-right: 0;
@@ -4003,6 +4010,7 @@ input[type="submit"].btn-block {
 .card-body {
   flex: 1 1 auto;
   padding: 1.25rem;
+  width: 100%;
 }
 .card-title {
   margin-bottom: 0.75rem;
@@ -8567,7 +8575,7 @@ a.text-secondary:hover {
   color: #60616f !important;
 }
 .text-success {
-  color: #1cc88a !important;
+  color: #000000 !important;
 }
 a.text-success:focus,
 a.text-success:hover {
@@ -8948,7 +8956,7 @@ a:focus {
   border-bottom: 0.25rem solid #858796 !important;
 }
 .border-left-success {
-  border-left: 0.25rem solid #1cc88a !important;
+  border-left: 0.25rem solid #000000 !important;
 }
 .border-bottom-success {
   border-bottom: 0.25rem solid #1cc88a !important;
@@ -9256,7 +9264,6 @@ a:focus {
   margin-left: 0.25rem;
 }
 .sidebar .sidebar-brand {
-  height: 4.375rem;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 800;
@@ -9996,10 +10003,18 @@ body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
 
-.product-cards-container h5 {
-    text-align: center;
-    margin: 17px 0;
-    color: #000000;
+.product-search-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.product-cards-container h3 {
+  text-align: center;
+  color: #000000;
+  margin: 25px 0;
 }
 
 .product-card {
@@ -10030,6 +10045,14 @@ body.sidebar-toggled footer.sticky-footer {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+}
+
+.product-search-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
 }
 
 .product-description {
@@ -10074,4 +10097,115 @@ body.sidebar-toggled footer.sticky-footer {
 .avatar {
   width: 40px;
   margin-left: 5px;
+}
+
+.product-detail-div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.product-detail-div h3 {
+  color: black;
+  margin-bottom: 25px;
+}
+
+.product-detail-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.product-detail-container h3 {
+  color: black;
+  margin-bottom: 25px;
+}
+
+.product-detail-img {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 100px;
+}
+
+.product-detail-img img {
+  width: 33%;
+  opacity: .7;
+  transition: 800ms;
+}
+
+.product-detail-img img:hover {
+  opacity: 1;
+}
+
+.product-detail-description {
+  width: 350px;
+  margin-right: 200px;
+  color: black;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-detail-description h3 {
+  text-align: center;
+}
+
+.description-div {
+  padding: 10px;
+}
+
+.price-div {
+  background-color: black;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.price-div p {
+  font-size: 30px;
+}
+
+.lastUser-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px 0;
+}
+
+.lastUser-container h3 {
+  color: black;
+  margin-bottom: 25px;
+}
+
+.last-user-card {
+  width: 25%;
+  border: 1px solid #ccc;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.last-user-card img {
+  width: 100%;
+  padding: 25px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.lastUser-description {
+  color: white;
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+  text-align: center;
+  background-color: black;
+  padding: 0;
+  border-radius: 0 0 10px 10px;
+}
+
+.logo-siesta {
+  width: 100px;
 }

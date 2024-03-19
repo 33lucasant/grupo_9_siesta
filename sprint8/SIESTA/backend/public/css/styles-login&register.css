@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.login-error {
+    color: red;
+}
+
 /*BODY*/
 html, body{
     font-family: 'Roboto Flex', sans-serif;
@@ -68,7 +72,7 @@ body main .registro{
     text-align: center;
 }
 
-.inp {
+.acceso .inp, .datos .inp {
     display: flex;
     width: 100%;
     align-items: center;

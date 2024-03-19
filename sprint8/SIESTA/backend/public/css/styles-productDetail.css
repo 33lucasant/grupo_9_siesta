@@ -4,12 +4,10 @@
     padding: 0;
 }
 
-html, body {
-    font-family: 'Roboto', sans-serif;
-    padding-top: 60px;
-    padding-bottom: 113px;
+html, .body-product-detail {
     background-color: #ffffff;
     height: 100%;
+    padding: 0;
 }
 
 .main-header {
@@ -30,7 +28,7 @@ html, body {
 .hamburger-y-logo {
     display: flex;
     justify-content: space-between;
-    width: 66%;
+    width: 64%;
     align-items: center;
 }
 
@@ -48,6 +46,11 @@ html, body {
     justify-content: center;
 }
 
+.edit-error {
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
+}
 
 .barrabusq {
     width: 250px;
@@ -102,6 +105,16 @@ html, body {
     width: 100%;
 }
 
+.main-footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.new-footer {
+    display: none;
+}
 
 .social a {
     color: #fff;
@@ -120,38 +133,52 @@ html, body {
 .description-prod {
     width: 100%;
     margin: 0;
-    background-color: white;
+    background-color:  #ffffff;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .description {
-    border: solid 0.5px #000000;
     border-top: none;
     padding: 10px 10px;
+    text-align: center;
+    color: #000000;
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
 }
 
-.nom-prod {
-    margin-bottom: 10px;
-}
-
-.price {
-    margin-top: 10px;
+.description p {
+    margin: 0;
+    padding: 10px;
 }
 
 .cart {
     text-align: center;
-    border: solid 0.5px #000000;
     padding: 10px 10px;
+    margin-right: 20px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
 }
 
-.add-to-cart i {
-    font-size: 40px;
-    color: black;
-    margin: 0;
+.add-to-cart-1 {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 30px;
 }
 
-.cart p {
-    color: black;
-    margin-top: 6px;
+.add-to-cart-1 i {
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 8px;
+    padding-right: 2px;
 }
 
 .cart a {
@@ -374,7 +401,13 @@ html, body {
         display: none;
     }
 
-
+    .new-footer {
+        display: block;
+    }
+    
+    .social {
+        margin-bottom: 30px;
+    }
 
     .main-product {
         display: none;
@@ -433,7 +466,7 @@ html, body {
 
 @media (min-width: 1200px) {
     body {
-        padding-top: 5vw;
+        padding-top: 6vw;
     }
 
     .main-header-top-bar {

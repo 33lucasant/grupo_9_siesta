@@ -13,17 +13,32 @@
             <div>
                 <input type="text" name="name" placeholder="Nombre" value="<%= productToEdit.name %>"> <span class="error-msg"></span>
             </div>
+            <% if (locals.errors && errors.name) { %>
+                <p class="edit-error">
+                    <%= errors.name.msg %>
+                </p>
+            <% } %>
             <br>
 
             <div>
                 <input type="text" name="price" placeholder="Precio" value="<%= productToEdit.price %>"> <span class="error-msg"></span>
             </div>
+            <% if (locals.errors && errors.price) { %>
+                <p class="edit-error">
+                    <%= errors.price.msg %>
+                </p>
+            <% } %>
             <br>
            
 
             <div>
                 <textarea name="description" cols="30" rows="10" placeholder="Descripción" id="desc-textarea"><%= productToEdit.description %></textarea> <span class="error-msg"></span>
             </div>
+            <% if (locals.errors && errors.description) { %>
+                <p class="edit-error">
+                    <%= errors.description.msg %>
+                </p>
+            <% } %>
             <br>
 
             <label>Imagenes</label>
@@ -36,14 +51,29 @@
                     <% }); %>
                 </div>
             </div>
+            <% if (locals.errors && errors.image) { %>
+                <p class="edit-error">
+                    <%= errors.image.msg %>
+                </p>
+            <% } %>
             <br>
 
             <input type="text" name="color" placeholder="Color" value="<%= productToEdit.color %>">
+            <% if (locals.errors && errors.color) { %>
+                <p class="edit-error">
+                    <%= errors.color.msg %>
+                </p>
+            <% } %>
             <br>
 
             <label for="sizes">Talles (Ingresar los talles separados por una coma)</label>
             <br>
             <input type="text" name="size" value="<%= productToEdit.size %>">
+            <% if (locals.errors && errors.size) { %>
+                <p class="edit-error">
+                    <%= errors.size.msg %>
+                </p>
+            <% } %>
             <br>
 
             <label for="category">Categorías</label>

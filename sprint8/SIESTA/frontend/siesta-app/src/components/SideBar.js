@@ -1,12 +1,15 @@
 import React from 'react';
-import image from '../assets/images/logo-DH.png';
+import image from '../assets/images/LOGO-siesta2.png';
 import ContentWrapper from './ContentWrapper';
-import GenresInDb from './GenresInDb';
-import LastMovieInDb from './LastMovieInDb';
-import ContentRowMovies from './ContentRowMovies';
+import Products from './Products';
+import ContentRowCards from './ContentRowCards';
 import NotFound from './NotFound';
 import {Link, Route, Routes} from 'react-router-dom';
 import SearchMovies from './SearchMovies';
+import ProductDetail from './ProductDetail';
+import Users from './Users';
+import LastProduct from './LastProduct';
+import LastUser from './LastUser';
 
 function SideBar(){
     return(
@@ -17,7 +20,7 @@ function SideBar(){
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
-                        <img className="w-100" src={image} alt="Digital House"/>
+                        <img className="logo-siesta" src={image} alt="Digital House"/>
                     </div>
                 </a>
 
@@ -28,7 +31,7 @@ function SideBar(){
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span></Link>
+                        <span>Dashboard - SIESTA</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -37,24 +40,34 @@ function SideBar(){
                 {/*<!-- Heading -->*/}
                 <div className="sidebar-heading">Actions</div>
 
-                {/*<!-- Nav Item - Pages -->*/}
-                <li className="nav-item">
-                <Link className="nav-link" to="/GenresInDb">
-                        <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
-                    </Link>
-                </li>
-
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to="/LastMovieInDb">
-                        <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Charts</span></Link>
+                    <Link className="nav-link" to="/Products">
+                        <i className="fas fa-socks fa-chart-area"></i>
+                        <span>Products</span></Link>
+                </li>
+
+                <li className="nav-item">
+                    <Link className="nav-link" to="/LastProduct">
+                        <i className="fas fa-tshirt fa-chart-area"></i>
+                        <span>Last Product</span></Link>
+                </li>
+
+                <li className="nav-item">
+                    <Link className="nav-link" to="/Users">
+                        <i className="fas fa-users fa-chart-area"></i>
+                        <span>Users</span></Link>
+                </li>
+
+                <li className="nav-item">
+                    <Link className="nav-link" to="/LastUser">
+                        <i className="fas fa-user fa-chart-area"></i>
+                        <span>Last User</span></Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item nav-link">
-                <Link className="nav-link" to="/ContentRowMovies">
+                <Link className="nav-link" to="/ContentRowCards">
                         <i className="fas fa-fw fa-table"></i>
                         <span>Tables</span></Link>
                 </li>
@@ -88,10 +101,13 @@ function SideBar(){
             {/*<!-- End Microdesafio 2 -->*/}
             <Routes>
                 <Route exact path="/" element={<ContentWrapper/>}/>
-                <Route path="/GenresInDb" element={<GenresInDb/>}/>
-                <Route path="/LastMovieInDb" element={<LastMovieInDb/>}/>
-                <Route path="/ContentRowMovies" element={<ContentRowMovies/>}/>
+                <Route path="/Products" element={<Products/>}/>
+                <Route path="/LastProduct" element={<LastProduct/>}/>
+                <Route path="/Users" element={<Users />}/>
+                <Route path="/LastUser" element={<LastUser/>}/>
+                <Route path="/ContentRowCards" element={<ContentRowCards/>}/>
                 <Route path="/search" element={<SearchMovies />}/>
+                <Route path="/Products/:id" element={<ProductDetail />} />
                 <Route path="*" element={<NotFound />}/>
             </Routes>
             {/*<!-- End Microdesafio 2 -->*/}

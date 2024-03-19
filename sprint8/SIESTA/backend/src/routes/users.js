@@ -26,13 +26,14 @@ const validations = [
 		.isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres'),
     body('avatar').custom((value, { req }) => {
         let file = req.file;
-		let acceptedExtensions = ['.jpg', '.png', '.jpeg'];
+		let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
 		
 		if (!file) {
 			throw new Error('Tienes que subir una imagen');
 		} else {
 			let fileExtension = path.extname(file.originalname);
 			if (!acceptedExtensions.includes(fileExtension)) {
+				fs.unlinkSync(path.join(__dirname, `../../public/img/avatars/${file.filename}`));
 				throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
 			}
 		}

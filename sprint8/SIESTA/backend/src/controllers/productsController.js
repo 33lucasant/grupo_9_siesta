@@ -2,6 +2,8 @@ const db = require('../database/models');
 const { Op } = require("sequelize");
 const sequelize = db.sequelize;
 const { validationResult } = require('express-validator');
+const fs = require('fs');
+const path = require('path');
 
 const productsController = {
 
@@ -18,14 +20,18 @@ const productsController = {
     },
 
     search: async (req, res) => {
+
 		const results = await db.Product.findAll({
             where: { name: {[Op.like] : `%${req.query.keywords.toLowerCase()}%`}},
             include: ['images']
         })
+        
 		res.render('results', {results});
 	},
 
     detail: async (req, res) => {
+
+        console.log(req.query);
         try {
 
             const product = await db.Product.findByPk(req.params.id, {
@@ -70,7 +76,8 @@ const productsController = {
             let productImages = [];
             for (let i = 0; i < 6; i++) {
                 
-                productImages[i] = req.files[i].filename
+                //productImages[i] = req.files[i].filename
+                productImages.push(req.files[i].filename);
 
                 await db.Image.create({
                     image: productImages[i],
@@ -104,10 +111,18 @@ const productsController = {
 
     editProduct: async (req, res) => {
 
+        const productToEdit = await db.Product.findByPk(req.params.id);
+
+        const productToEditImages = await db.Image.findAll({where: {product_id: req.params.id}});
+
         const resultValidation = validationResult(req);
+
+
 
         if (resultValidation.errors.length > 0) {
             return res.render('edit', {
+                productToEdit,
+                productToEditImages,
                 errors: resultValidation.mapped(),
                 oldData: req.body
             });
@@ -128,16 +143,34 @@ const productsController = {
                 where: {id: req.params.id}
             });
 
-            let productImages = [];
-            for (let i = 0; i < 6; i++) {
-                
-                productImages[i] = req.files[i].filename
-
-                await db.Image.update({
-                    image: productImages[i]
-                }, {where: {product_id: req.params.id}})
-            }
+            if (req.files.length == 6) {
+                const images = await db.Image.findAll({
+                    where: {product_id: req.params.id},
+                });
     
+                for (i = 0; i < images.length; i++) {
+                    fs.unlinkSync(path.join(__dirname, `../../public/img/products/${images[i].image}`))
+                }
+    
+                let firstID = images[0].id;
+    
+                let productImages = [];
+                for (let i = 0; i < 6; i++) {
+    
+                    productImages.push(req.files[i].filename);
+    
+                    if (i == 0) {
+                        await db.Image.update({
+                            image: productImages[i]
+                        }, {where: {product_id: req.params.id} && {id: firstID}})
+                    } else {
+                        firstID += 1;
+                        await db.Image.update({
+                            image: productImages[i]
+                        }, {where: {product_id: req.params.id} && {id: firstID}})
+                    }
+                }
+            }
 
             res.redirect('/products');
 
@@ -149,9 +182,18 @@ const productsController = {
     delete: async (req, res) => {
         try {
 
+            const imagesToDelete = await db.Image.findAll({
+                where: {product_id: req.params.id},
+            });
+
+            for (i = 0; i < imagesToDelete.length; i++) {
+                fs.unlinkSync(path.join(__dirname, `../../public/img/products/${imagesToDelete[i].image}`))
+            }
+
             await db.Image.destroy({
                 where: {product_id: req.params.id},
             });
+            
 
             await db.Product.destroy({
                 where: {id: req.params.id},

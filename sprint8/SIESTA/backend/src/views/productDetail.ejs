@@ -2,7 +2,7 @@
 <html lang="en">
 <%- include('partials/head', {Title: 'Product Detail'}) %>
 
-<body>
+<body class="body-product-detail">
     <%- include('partials/header') %>
 
     <main class="main">
@@ -41,9 +41,11 @@
                 </div>
 
                 <div class="add-to-cart-div">
+                    <a href="#">
+                        <i class="fas fa-cart-plus"></i>
+                    </a>
                     <a href="/products/cart">
-                         AGREGAR AL CARRITO <i class="fas fa-cart-plus"></i>
-                        </button> 
+                        <p>Add to Cart</p>
                     </a>
                 </div>
 
@@ -67,19 +69,18 @@
 
     <footer class="main-footer">
         <div class="description-prod">
-            <div class="cart">
-                <a href="/products/cart" class="add-to-cart-1">
-                    <p>Add to Cart</p>
-                </a>
-            </div>
             <div class="description">
                 <p class="nom-prod"><%= product.name %>&nbsp;&nbsp;&nbsp;</p>
                 <p class="price">$<%= product.price %></p>
+            </div>
+            <div class="cart">
+                <a href="/products/cart" class="add-to-cart-1">
+                    <i class="fas fa-cart-plus"></i>
+                </a>
             </div>
         </div>
     </footer>
 
     <script src="/js/product-detail.js"></script>
- 
 </body>
 </html>

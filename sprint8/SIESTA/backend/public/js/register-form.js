@@ -1,6 +1,6 @@
 const isEmpty = (input) => input.value && input.value.trim() !== "";
 const isEmail = (input) => {
-    let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/; //expresiones regulares
 
     if (input.value.match(validRegex)) {
         return true;
@@ -8,6 +8,7 @@ const isEmail = (input) => {
         return false;
     }
 };
+
 function hasExtension(input, exts) {
     exts = ['.jpg', '.gif', '.png', '.jpeg'];
     return (new RegExp('(' + exts.join('|').replace(/\./g, '\\.') + ')$')).test(input.value)
@@ -115,7 +116,7 @@ window.addEventListener('load', function() {
 
 
 
-    let inputs = document.querySelectorAll('input');
+    let inputs = document.querySelectorAll('.datos input');
 
     inputs.forEach(input => {
         

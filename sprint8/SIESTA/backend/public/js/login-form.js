@@ -70,7 +70,7 @@ window.addEventListener('load', function() {
     });
 })
 
-let inputs = document.querySelectorAll('input');
+let inputs = document.querySelectorAll('.acceso input');
 
 inputs.forEach(input => {
     

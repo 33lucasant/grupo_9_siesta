@@ -26,7 +26,10 @@
 
                         <% } else { %>
 
-                            <li class="list-group-item" id="logged-li"><a href="/user/profile">Perfil</a></li>
+                            <li class="list-group-item" id="logged-li"><i class="fas fa-user"></i><a href="/user/profile">Perfil</a></li>
+                            <% if (locals.userLogged.role_id == 1) { %>
+                                <li class="list-group-item"><a href="/admin"><i class="fas fa-cog"></i>Panel de Administrador</a></li>
+                            <% } %>
                             <li class="list-group-item" id="logged-li"><a href="/user/logout"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a></li>
                             <li class="list-group-item"><a href="/products"><i class="fas fa-tshirt"></i>Todos los productos</a></li>
                             <li class="list-group-item"><a href="/products/men"><i class="fas fa-male"></i>Hombre</a></li>
@@ -91,8 +94,5 @@
 
         </div>
     </div>
-
-
-    
 
 </header>

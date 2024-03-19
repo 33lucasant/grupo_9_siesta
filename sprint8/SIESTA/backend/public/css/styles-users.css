@@ -18,7 +18,7 @@ html, body {
 }
 
 .users-list-main {
-    height: 100%;
+    margin: 50px;
 }
 
 .users-list {
@@ -83,19 +83,25 @@ html, body {
     width: 100%;
     justify-content: center;
     text-align: center;
-    height: 100%;
     margin: 40px 0;
 }
 
+.edit-user-role-main {
+    height: 100%;
+}
+
 .edit-user-main form {
-    width: 40%;
-    height: 600px;
-    text-align: center;
+    width: 50%;
 }
 
 .edit-user-main form input {
-    display: unset;
     margin: 10px;
+    width: 100%;
+}
+
+.edit-user-main form img {
+    width: 200px;
+    margin: 20px 0;
 }
 
 #avatar {
@@ -120,6 +126,7 @@ html, body {
     text-decoration:none;
     font-family:'Roboto',sans-serif;
     font-weight:300;
+    font-size: 12px;
     color:#f14e4e;
     text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
     text-align:center;
@@ -139,7 +146,8 @@ html, body {
     text-decoration: none;
     font-family: 'Roboto',sans-serif;
     font-weight: 300;
-    color:#84f14e;;
+    font-size: 14px;
+    color:#84f14e;
     text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
     text-align: center;
     transition: all 0.2s;
@@ -168,8 +176,8 @@ html, body {
 
 @media (min-width: 768px) {
     .user-card {
-        width: 25%;
-        height: 35vw;
+        width: 28%;
+        height: 42vw;
     }
 
     /*.btn-with-movement {
@@ -247,17 +255,26 @@ html, body {
 
 
 @media (min-width: 1100px) {
+    .edit-user-main form {
+        width: 25%;
+    }
+
     .user-card {
         width: 22%;
         height: 30vw;
+    }
+
+    .edit-user-role, .remove-user-btn {
+        font-size: 16px;
     }
 }
 
 
 @media (min-width: 1300px) {
     .user-card {
-        width: 18%;
+        width: 20%;
         height: 25vw;
+        margin: 20px 20px;
     }
 }
 
@@ -265,5 +282,6 @@ html, body {
     .user-card {
         width: 15%;
         height: 20vw;
+        margin: 10px 20px;
     }
 }
